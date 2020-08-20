@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="dtt.vn.user.service">
+	<author>nhanvienDTT</author>
+	<namespace>ThongTinDangKy</namespace>
+	<entity name="ThongTinDangKy" table="ttnd_thongtindangky" local-service="true" remote-service="true" cache-enabled="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="emailAddress" db-name="email_address" type="String" />
+		<column name="userName" db-name="username" type="String"/>
+		<column name="soGiayTo" db-name="sogiayto" type="String"/>
+		<column name="maKichHoat" db-name="makichhoat" type="String" />
+		<column name="activeType" db-name="activetype" type="String"/>
+		<column name="doiTuongSuDungId" db-name="doituongsudung_id" type="int" />
+		<column name="noiDung" db-name="noidung" type="String" />
+		<column name="ngayTao" db-name="ngaytao" type="Date"/>
+		
+		<finder name="MaKichHoat" return-type="ThongTinDangKy">
+			<finder-column name="maKichHoat" />
+		</finder>
+		
+		<finder name="emailAddress" return-type="ThongTinDangKy">
+			<finder-column name="emailAddress" />
+		</finder>
+		<finder name="userName" return-type="ThongTinDangKy">
+			<finder-column name="userName" />
+		</finder>
+		<finder name="soGiayTo" return-type="ThongTinDangKy">
+			<finder-column name="soGiayTo" />
+		</finder>
+		<finder name="activeType" return-type="ThongTinDangKy">
+			<finder-column name="activeType" />
+		</finder>
+		
+	</entity>
+	
+	<entity name="DoiTuongSuDung" table="ttnd_doituongsudung" local-service="true" remote-service="true" cache-enabled="false">
+
+		<column name="id" db-name="id" type="long" primary="true" />
+
+		<column name="ma" db-name="ma" type="String" />
+		<column name="ten" db-name="ten" type="String" />
+		<column name="loai" db-name="loai" type="int" />
+		<column name="moTa" db-name="mota" type="String" />
+
+		<order by="asc">
+			<order-column name="id" />
+		</order>
+		
+		
+		<finder return-type="DoiTuongSuDung" name="Ma">
+			<finder-column name="ma"/>
+		</finder>
+		
+
+		
+	</entity>
+	
+	<entity name="AccountLog" table="account_log" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true"/>
+		<column name="accountId" db-name="account_id" type="long"/>
+		<column name="nguoiSuaId" db-name="nguoisua_id" type="long"/>
+		<column name="tenNguoiSua" db-name="ten_nguoisua" type="String"/>
+		<column name="ngaySua" db-name="ngaysua" type="Date"/>		
+		<column name="emailNguoiSua" db-name="email_nguoisua" type="String"/>		
+		<column name="phienBan" db-name="phienban" type="long"/>
+		<column name="json" db-name="json" type="String"/>
+		
+		<order by="desc">
+			<order-column name="phienBan"/>
+		</order>
+		
+		<finder return-type="Collection" name="Account">
+			<finder-column name="accountId"/>
+		</finder>
+	</entity>
+	
+	<entity name="ThongTinCanBo" table="ttnd_thongtincanbo" local-service="true" remote-service="true" cache-enabled="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="emailAddress" db-name="email_address" type="String" />
+		<column name="userName" db-name="username" type="String"/>
+		<column name="nameRole" db-name="namerole" type="String"/>
+		<column name="noiDung" db-name="noidung" type="String" />
+		
+		
+		<finder name="emailAddress" return-type="ThongTinDangKy">
+			<finder-column name="emailAddress" />
+		</finder>
+		<finder name="userName" return-type="ThongTinDangKy">
+			<finder-column name="userName" />
+		</finder>
+		<finder name="nameRole" return-type="Collection">
+			<finder-column name="nameRole" />
+		</finder>
+		
+	</entity>
+	
+	<entity name="DataImport" table="idm_dataimport" local-service="true" remote-service="true" cache-enabled="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="screenName" db-name="screen_name" type="String" />
+		<column name="firstName" db-name="first_name" type="String" />
+		<column name="lastName" db-name="last_name" type="String" />
+		<column name="unit" db-name="unit" type="String" />
+		<column name="emailAddress" db-name="email_address" type="String" />
+		<column name="phone" db-name="phone" type="String" />
+		<column name="jobTitle" db-name="job_title" type="String"/>
+		<column name="nameRole" db-name="role_name" type="String"/>
+		<column name="numberId" db-name="number_id" type="String" />
+		<column name="hasImport" db-name="has_import" type="String" />
+		<column name="errorMsg" db-name="error_message" type="String" />
+		<column name="insertDate" db-name="insert_date" type="Date" />
+		
+		<finder name="I" return-type="Collection">
+			<finder-column name="hasImport" />
+		</finder>
+		<finder return-type="Collection" name="ScreenName">
+			<finder-column name="screenName"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="LastName">
+			<finder-column name="lastName"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="EmailAddress">
+			<finder-column name="emailAddress"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="Phone">
+			<finder-column name="phone"></finder-column>
+		</finder>
+		<!-- <finder return-type="DataImport" name="EmailAddress">
+			<finder-column name="emailAddress"></finder-column>
+		</finder> -->
+	</entity>
+	
+</service-builder>

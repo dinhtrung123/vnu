@@ -1,0 +1,9 @@
+Bundle-Name: user-manage-service-api
+Bundle-SymbolicName: dtt.vn.user.service.api
+
+Export-Package:\
+	dtt.vn.user.service.exception,\
+	dtt.vn.user.service.model,\
+	dtt.vn.user.service.service,\
+	dtt.vn.user.service.service.persistence
+-includeresource: META-INF/service.xml=../user-manage-service-service/service.xml

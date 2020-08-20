@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="dtt.vn.user.service.model.AccountLog" />
+	<import class="dtt.vn.user.service.model.DataImport" />
+	<import class="dtt.vn.user.service.model.DoiTuongSuDung" />
+	<import class="dtt.vn.user.service.model.ThongTinCanBo" />
+	<import class="dtt.vn.user.service.model.ThongTinDangKy" />
+	<class name="dtt.vn.user.service.model.impl.AccountLogImpl" table="account_log">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="account_id" name="accountId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="nguoisua_id" name="nguoiSuaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="ten_nguoisua" name="tenNguoiSua" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ngaysua" name="ngaySua" type="org.hibernate.type.TimestampType" />
+		<property column="email_nguoisua" name="emailNguoiSua" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="phienban" name="phienBan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="json" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dtt.vn.user.service.model.impl.DataImportImpl" table="idm_dataimport">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="screen_name" name="screenName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="first_name" name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="last_name" name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="unit" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="email_address" name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="job_title" name="jobTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="role_name" name="nameRole" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="number_id" name="numberId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="has_import" name="hasImport" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="error_message" name="errorMsg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="insert_date" name="insertDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="dtt.vn.user.service.model.impl.DoiTuongSuDungImpl" table="ttnd_doituongsudung">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="loai" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="mota" name="moTa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dtt.vn.user.service.model.impl.ThongTinCanBoImpl" table="ttnd_thongtincanbo">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="email_address" name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="username" name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="namerole" name="nameRole" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="noidung" name="noiDung" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dtt.vn.user.service.model.impl.ThongTinDangKyImpl" table="ttnd_thongtindangky">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="email_address" name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="username" name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="sogiayto" name="soGiayTo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="makichhoat" name="maKichHoat" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="activetype" name="activeType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="doituongsudung_id" name="doiTuongSuDungId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="noidung" name="noiDung" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ngaytao" name="ngayTao" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

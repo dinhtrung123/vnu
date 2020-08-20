@@ -1,0 +1,10 @@
+Bundle-Name: oep-core-module
+Bundle-SymbolicName: org.oep.core
+
+Service-Component: *
+-jsp: *.jsp,*.jspf
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true
+Import-Package: *;resolution:=optional 
+Export-Package: org.oep.core.service.util

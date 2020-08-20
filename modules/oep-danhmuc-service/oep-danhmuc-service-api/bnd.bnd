@@ -1,0 +1,9 @@
+Bundle-Name: oep-danhmuc-service-api
+Bundle-SymbolicName: org.oep.danhmuc.api
+
+Export-Package:\
+	org.oep.danhmuc.exception,\
+	org.oep.danhmuc.model,\
+	org.oep.danhmuc.service,\
+	org.oep.danhmuc.service.persistence
+-includeresource: META-INF/service.xml=../oep-danhmuc-service-service/service.xml

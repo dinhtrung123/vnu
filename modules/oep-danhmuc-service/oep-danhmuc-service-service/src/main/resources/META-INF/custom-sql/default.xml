@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+ <custom-sql>
+     <sql file="META-INF/custom-sql/mysql/danhmuc.xml" />
+    
+ </custom-sql>

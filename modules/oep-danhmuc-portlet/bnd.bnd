@@ -1,0 +1,9 @@
+Bundle-Name: oep-danhmuc-portlet
+Bundle-SymbolicName: org.oep.danhmuc
+
+-jsp: *.jsp,*.jspf
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true
+-metatype: *
+Export-Package: org.oep.danhmuc.portlet.quanly.keys

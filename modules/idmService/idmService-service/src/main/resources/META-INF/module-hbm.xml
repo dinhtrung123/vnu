@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="dtt.vn.vnpost.model.Account" />
+	<import class="dtt.vn.vnpost.model.DanhMuc" />
+	<import class="dtt.vn.vnpost.model.Nhom" />
+	<import class="dtt.vn.vnpost.model.Photo" />
+	<import class="dtt.vn.vnpost.model.WorkItem" />
+	<class name="dtt.vn.vnpost.model.impl.AccountImpl" table="idm_Account">
+		<id name="accountId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="accountType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="accountName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="fullName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthdate" type="org.hibernate.type.TimestampType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="telNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="personalId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="legalDelegate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="insuranceCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nationality" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ethnicGroup" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="familyRegNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maritalStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="workingPlace" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nativePlace" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rangeDate" type="org.hibernate.type.TimestampType" />
+		<property name="issuedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fatherName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="motherName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="guardianName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spouseName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="headHouseholdName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="representativeNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="representativeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="representativeTelNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fax" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="superiorOrganization" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="idDBXM" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="cityCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="districtCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="wardCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cityCodeXM" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="districtCodeXM" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="wardCodeXM" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addressXM" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="attachFile" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="accountStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="processStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="signImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hoSoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="assignUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ipLevel" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reOpen" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="dtt.vn.vnpost.model.impl.DanhMucImpl" table="data_item">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="nhom_id" name="nhomId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="mota" name="moTa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="muc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="cha_id" name="chaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="thutu_hienthi" name="thuTuHienThi" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="ma_giapha" name="maGiaPha" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="trangthai" name="trangThai" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="dtt.vn.vnpost.model.impl.NhomImpl" table="data_group">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mota" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dtt.vn.vnpost.model.impl.PhotoImpl" table="idm_photo">
+		<id name="imageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="className" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="classPK" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="thumbnailId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="imageType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="contentType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dtt.vn.vnpost.model.impl.WorkItemImpl" table="idm_workitem">
+		<id name="workItemId" type="long">
+			<generator class="increment" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusResponse" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startTime" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" type="org.hibernate.type.TimestampType" />
+		<property name="accountId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<sql id="mysql.org.oep.system.dao.mail.service.persistence.SendMailHistoryFinder.countByTADD_TLE_TT_SDE">
+		<![CDATA[
+			SELECT COUNT(*) as total
+			FROM OEP_SENDMAIL_HISTORY
+			WHERE 1 = 1
+			AND GROUP_ID = ?
+			[$TRANGTHAI$]
+			[$TO_ADDRESS$]
+			[$SUBJECT$]
+			[$SEND_DATE_FROM$]
+			[$SEND_DATE_TO$]
+		]]>
+	</sql>
+	<sql id="mysql.org.oep.system.dao.mail.service.persistence.SendMailHistoryFinder.getByTADD_TLE_TT_SDE">
+		<![CDATA[
+			SELECT *
+			FROM OEP_SENDMAIL_HISTORY
+			WHERE 1 = 1
+			AND GROUP_ID = ?
+			[$TRANGTHAI$]
+			[$TO_ADDRESS$]
+			[$SUBJECT$]
+			[$SEND_DATE_FROM$]
+			[$SEND_DATE_TO$]
+			ORDER BY NGAYGUI DESC
+		]]>
+	</sql>
+</custom-sql>

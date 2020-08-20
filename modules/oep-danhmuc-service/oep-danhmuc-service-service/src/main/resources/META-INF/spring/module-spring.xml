@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="org.oep.danhmuc.service.impl.DanhMucLocalServiceImpl" id="org.oep.danhmuc.service.DanhMucLocalService" />
+	<bean class="org.oep.danhmuc.service.impl.DanhMucServiceImpl" id="org.oep.danhmuc.service.DanhMucService" />
+	<bean class="org.oep.danhmuc.service.persistence.impl.DanhMucPersistenceImpl" id="org.oep.danhmuc.service.persistence.DanhMucPersistence" parent="basePersistence" />
+	<bean class="org.oep.danhmuc.service.persistence.impl.DanhMucFinderImpl" id="org.oep.danhmuc.service.persistence.DanhMucFinder" parent="basePersistence" />
+	<bean class="org.oep.danhmuc.service.impl.NhomLocalServiceImpl" id="org.oep.danhmuc.service.NhomLocalService" />
+	<bean class="org.oep.danhmuc.service.impl.NhomServiceImpl" id="org.oep.danhmuc.service.NhomService" />
+	<bean class="org.oep.danhmuc.service.persistence.impl.NhomPersistenceImpl" id="org.oep.danhmuc.service.persistence.NhomPersistence" parent="basePersistence" />
+</beans>

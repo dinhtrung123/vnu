@@ -1,0 +1,9 @@
+Bundle-Name: oep-core-service-api
+Bundle-SymbolicName: org.oep.core.api
+
+Export-Package:\
+	org.oep.core.exception,\
+	org.oep.core.model,\
+	org.oep.core.service,\
+	org.oep.core.service.persistence
+-includeresource: META-INF/service.xml=../oep-core-service-service/service.xml

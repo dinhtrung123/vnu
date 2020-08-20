@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<sql id="org.oep.core.service.persistence.impl.TrungTamHanhChinhFinderImpl.searchTTHC">
+		<![CDATA[
+			SELECT * from idm_trungtamhanhchinh tthanhchinh
+			WHERE 1=1
+			[$TEN_MA$]
+			[$COQUAN_QUANLY$]
+			[$TRANG_THAI$]
+		]]>
+	</sql>
+	
+	<sql id="org.oep.core.service.persistence.impl.TrungTamHanhChinhFinderImpl.countTTHC">
+		<![CDATA[
+			SELECT COUNT(*)  from idm_trungtamhanhchinh tthanhchinh	
+			WHERE 1=1
+			[$TEN_MA$]
+			[$COQUAN_QUANLY$]
+			[$TRANG_THAI$]
+		]]>
+	</sql>
+	
+	
+</custom-sql>

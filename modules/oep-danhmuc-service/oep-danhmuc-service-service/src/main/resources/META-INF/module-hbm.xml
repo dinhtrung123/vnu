@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="org.oep.danhmuc.model.DanhMuc" />
+	<import class="org.oep.danhmuc.model.Nhom" />
+	<class name="org.oep.danhmuc.model.impl.DanhMucImpl" table="data_item">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="nhom_id" name="nhomId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="TEN" name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="mota" name="moTa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="muc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="cha_id" name="chaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="thutu_hienthi" name="thuTuHienThi" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="ma_giapha" name="maGiaPha" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="trangthai" name="trangThai" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="org.oep.danhmuc.model.impl.NhomImpl" table="data_group">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mota" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

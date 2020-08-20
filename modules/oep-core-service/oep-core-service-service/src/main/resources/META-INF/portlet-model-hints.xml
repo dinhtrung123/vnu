@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="org.oep.core.model.LogSMS">
+		<field name="id" type="long" />
+		<field name="sentDateTime" type="Date" />
+		<field name="phone" type="String" />
+		<field name="responseDate" type="Date" />
+		<field name="errorCode" type="String" />
+		<field name="errorDetail" type="String" />
+		<field name="messageId" type="long" />
+	</model>
+	<model name="org.oep.core.model.Mail">
+		<field name="id" type="long" />
+		<field name="groupId" type="long" />
+		<field name="code" type="String" />
+		<field name="toAddress" type="String" />
+		<field name="subject" type="String" />
+		<field name="body" type="String" />
+		<field name="ngayGui" type="Date" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="org.oep.core.model.MappingVmap">
+		<field name="id" type="long" />
+		<field name="classpk" type="long" />
+		<field name="classname" type="String" />
+		<field name="latitude" type="String" />
+		<field name="longitude" type="String" />
+		<field name="ghichu" type="String" />
+	</model>
+	<model name="org.oep.core.model.PhanQuyen">
+		<field name="id" type="long" />
+		<field name="classname" type="String" />
+		<field name="classpk" type="long" />
+		<field name="giatri" type="String" />
+	</model>
+	<model name="org.oep.core.model.ThamSo">
+		<field name="id" type="long" />
+		<field name="groupId" type="long" />
+		<field name="className" type="String" />
+		<field name="classPK" type="long" />
+		<field name="loaiId" type="long" />
+		<field name="ma" type="String" />
+		<field name="giaTri" type="String" />
+		<field name="moTa" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="quyenTacDong" type="int" />
+	</model>
+	<model name="org.oep.core.model.ThamSoLoai">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+	</model>
+	<model name="org.oep.core.model.TrungTamHanhChinh">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="donViId" type="long" />
+		<field name="donViIds" type="String" />
+		<field name="thongTinLienHe" type="String" />
+		<field name="trangThai" type="int" />
+	</model>
+</model-hints>

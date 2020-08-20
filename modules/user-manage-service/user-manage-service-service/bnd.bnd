@@ -1,0 +1,13 @@
+Bundle-ClassPath: \
+	.,\
+	lib/gson.jar
+	
+Import-Package: *;resolution:=optional
+Bundle-Name: user-manage-service-service
+Bundle-SymbolicName: dtt.vn.user.service.service
+
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+
+-includeresource: \
+	lib/gson.jar=gson-2.8.6.jar

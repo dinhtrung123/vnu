@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<custom-sql>
+		<sql id="org.oep.danhmuc.service.persistence.impl.DanhMucFinderImpl.searchItem">
+		<![CDATA[
+			SELECT * FROM data_item di
+			where trangthai = 1
+			[$MUC$]
+			[$ID_CHA$]
+			[$NHOM_DANHMUC$]
+			[$MATEN$]
+			order by di.THUTU_HIENTHI asc , di.ten asc	
+		]]>
+	</sql>
+	
+	<sql id="org.oep.danhmuc.service.persistence.impl.DanhMucFinderImpl.countItem">
+		<![CDATA[
+			SELECT COUNT(di.id) FROM data_item di 
+			where trangthai = 1
+			[$MUC$]
+			[$ID_CHA$]
+			[$NHOM_DANHMUC$]
+			[$MATEN$]
+		]]>
+	</sql>
+	
+	<sql id="org.oep.danhmuc.service.persistence.impl.DanhMucFinderImpl.getItemWithMaxDisplayIndex">
+		<![CDATA[
+		SELECT * FROM data_item di
+			WHERE cha_id = ?
+			order by THUTU_HIENTHI ASC
+			limit 1
+		]]>
+	</sql>
+	
+	<sql id="org.oep.danhmuc.service.persistence.impl.DanhMucFinderImpl.getItemWithMaxDisplayIndexByMuc">
+		<![CDATA[
+		SELECT * FROM data_item di
+			WHERE MUC = ?
+			order by THUTU_HIENTHI ASC
+			limit 1
+		]]>
+	</sql>		
+</custom-sql>

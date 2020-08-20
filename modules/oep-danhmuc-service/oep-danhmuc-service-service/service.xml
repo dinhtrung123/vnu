@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="org.oep.danhmuc">
+	<author>nhanvienDTT</author>
+	<namespace>Danhmuc</namespace>
+
+	<entity name="Nhom" table="data_group" local-service="true" remote-service="true">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="ma" db-name="ma" type="String" />
+		<column name="ten" db-name="ten" type="String" />
+		<column name="mota" db-name="mota" type="String" />
+		<finder name="Ma" return-type="Nhom">
+			<finder-column name="ma" />
+		</finder>
+
+	</entity>
+
+	<entity name="DanhMuc" table="data_item" local-service="true" remote-service="true">
+
+		<column name="id" db-name="id" type="long" primary="true" />
+
+		<column name="nhomId" db-name="nhom_id" type="long" />
+		<column name="ma" db-name="ma" type="String" />
+		<column name="ten" db-name="TEN" type="String" />
+		<column name="moTa" db-name="mota" type="String" />
+		<column name="muc" db-name="muc" type="int" />
+		<column name="chaId" db-name="cha_id" type="long" />
+		<column name="thuTuHienThi" db-name="thutu_hienthi" type="int" />
+		<column name="maGiaPha" db-name="ma_giapha" type="String" />
+		<column name="trangThai" db-name="trangthai" type="boolean" />
+		
+		<order>
+			<order-column name="thuTuHienThi" order-by="asc" />
+			<order-column name="ten" order-by="asc"/>
+		</order>
+		
+		<finder name="M" return-type="DanhMuc">
+			<finder-column name="ma" /> 
+		</finder>
+		
+		<finder name="T" return-type="DanhMuc">
+			<finder-column name="ten" /> 
+		</finder>
+		
+		<finder name="P_T" return-type="DanhMuc">
+			<finder-column name="chaId" />
+			<finder-column name="ten" />
+		</finder>
+		
+		<finder name="Cha_TrangThai" return-type="Collection">
+			<finder-column name="chaId" /> 
+			<finder-column name="trangThai" /> 
+		</finder>
+		
+		<finder name="ChaId" return-type="Collection">
+			<finder-column name="chaId" /> 
+		</finder>
+		
+		<finder name="MUC" return-type="Collection">
+			<finder-column name="muc" /> 
+		</finder>
+		
+		<finder name="NhomID" return-type="Collection">
+			<finder-column name="nhomId" /> 
+		</finder>
+		
+		<finder return-type="DanhMuc" name="TT">
+			<finder-column name="thuTuHienThi" />
+		</finder>
+		
+		<finder return-type="Collection" name="NhomId_TrangThai">
+			<finder-column name="nhomId" /> 
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder return-type="DanhMuc" name="Ma_TrangThai">
+			<finder-column name="ma" /> 
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder name="Ma_Muc" return-type="Collection">
+			<finder-column name="ma" /> 
+			<finder-column name="muc" />
+		</finder>
+		
+		<finder return-type="Collection" name="ChaId_Muc">
+			<finder-column name="chaId" /> 
+			<finder-column name="muc" />
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder return-type="Collection" name="NhomId_Muc_TrangThai">
+			<finder-column name="nhomId" /> 
+			<finder-column name="muc" />
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder return-type="DanhMuc" name="NhomId_Muc_Ten_TrangThai">
+			<finder-column name="nhomId" /> 
+			<finder-column name="muc" />
+			<finder-column name="ten" />
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder return-type="DanhMuc" name="NhomId_Muc_Ma_TrangThai">
+			<finder-column name="nhomId" /> 
+			<finder-column name="muc" />
+			<finder-column name="ma" />
+			<finder-column name="trangThai" />
+		</finder>
+		
+		<finder return-type="Collection" name="Ids">
+			<finder-column name="id" arrayable-operator="OR"/>
+		</finder>
+		
+		<finder return-type="Collection" name="NhomId_Muc">
+			<finder-column name="nhomId" /> 
+			<finder-column name="muc" />
+		</finder>
+		
+		
+		<finder return-type="DanhMuc" name="NhomId_Ma">
+			<finder-column name="nhomId" /> 
+			<finder-column name="ma" />
+		</finder>
+		
+	</entity>
+	<exceptions>
+		<exception>EmptyCode</exception>
+		<exception>EmptyName</exception>
+		<exception>DuplicateCode</exception>
+		<exception>FileTypeNotSupport</exception>		
+	</exceptions>
+	
+</service-builder>

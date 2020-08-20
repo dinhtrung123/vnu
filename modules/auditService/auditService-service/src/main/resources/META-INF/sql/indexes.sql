@@ -1,0 +1,1 @@
+create index IX_B9DFAEFF on audit_AuditEvent (companyId);

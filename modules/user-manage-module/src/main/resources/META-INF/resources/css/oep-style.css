@@ -1,0 +1,2366 @@
+div.tle1 {
+	border-bottom: solid 1px #6098c7;
+    color: #21436b;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+div.mb-0{
+	margin-bottom: 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----- Reset -----*/
+html {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+/* Line-height should always be unitless! */
+body {
+  color:#000;
+  
+  
+  word-wrap:break-word
+}
+
+
+/* Remove annoying border on linked images. */
+a:link, a:visited{color:#075d9a;text-decoration:none}
+a:hover{text-decoration:underline}
+a:active {color:#ef5a00}
+a img { border: none; }
+
+
+
+
+/**************end******************/
+body .oep-inputfield,
+body .oep-calendar,
+body .oep-select,
+body .oep-textarea{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	min-height: 30px !important;
+	font-size: 14px;
+	float: left;
+}
+
+body .oep-button{
+  margin:0px !important;
+     
+}
+
+
+body label{
+
+  display: inline !important;
+  margin:0px !important;
+}
+
+
+div.oep-container{
+	min-width:500px;
+	max-width:100%;
+	border:0px solid #cfcfcf;
+	background-color:#fff;
+	margin:0 auto;	
+	min-height:100px;
+	padding-left: 0px;
+    padding-bottom: 2px;
+    padding-right: 0px;
+    /**overflow:hidden !important;**/
+	
+	
+	
+}
+
+
+/****header for form***/
+
+div.oep-container p.oep-p-14{
+	color:#000;
+	font-size:14px;
+		
+	text-align: center;
+}
+div.oep-container p.oep-p-16{
+	color:#000;
+	font-size:16px;
+	text-align:center;
+	
+}
+div.oep-container p.oep-p-18{
+	font-size:18px;	
+	font-weight:bold;
+	text-align: center;
+	
+}
+div.oep-container p.oep-p-20{
+	color:#000;
+	text-transform:uppercase;
+	font-size:20px;
+	font-weight:bold;
+	
+	
+	text-align: center;
+}
+/**------------table for form not border---------/****/
+
+table.oep-table-form{
+	margin:0px;
+	table-layout: fixed;
+	text-align: center;
+	padding: 0px;
+	padding-right:10px;
+	padding-left:10px;
+	background-color:#fff !important;
+	margin: 0px;
+	width: 100%;
+	
+}
+ table.oep-table-form tr{
+	margin:0px;
+	padding: 0px;
+	background-color:#fff !important;
+	border: 0px !important;
+}
+
+table.oep-table-form tr td{
+	margin:0px;
+	padding: 0px;
+	padding-top:10px;
+	text-align: left;
+	vertical-align: top;
+	border: 0px !important;
+	background-color:#fff !important;
+	height: 20px;
+	
+}
+
+
+
+div.oep-area-note{
+	padding:10px 10px;
+	border:1px solid #abd4f0;
+	background:#dff2ff;
+	
+	margin-bottom: 7px;
+
+}
+
+
+/****input html***/
+
+input:read-only {
+    background: rgb(247,247,247);
+}
+
+.oep-inputfield{
+	border:1px solid #adadad;
+	padding:5px 10px;	
+}
+.oep-inputfield:focus{
+	border-color:#ef5a00;	
+}
+
+
+
+.readonly{
+	
+	background: rgb(247,247,247) !important;
+	
+	
+}
+
+
+#oep-inputfield-search:HOVER{
+	cursor: pointer;
+}
+
+
+#oep-inputfield-search input{
+	float:left;
+	height: 95%;
+	
+	margin: 0px;
+	border: 0px;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+	
+	
+}
+
+
+
+
+.oep-textarea{
+	border: 1px solid rgb(224,224,224);
+	padding:6px;
+	color:black;
+	font-style:normal;
+	margin:5px 5px 0 0;
+
+	text-align: left;
+	
+}
+.oep-textarea:focus{
+	border: 1px solid rgb(245,134,52);
+	
+}
+
+
+.oep-select{
+	border:1px solid #adadad;
+	padding:7px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-right:2px;
+	color:black;
+	font-style:normal;
+	margin:0px;
+	
+	
+	
+}
+
+
+.oep-select-multi{
+	
+		
+}
+.oep-select-multi:FOCUS{
+	border-color:#ef5a00;
+}
+
+.oep-select:focus{
+	border-color:#ef5a00;
+	
+}
+.aui-field-input-select{
+	border:1px solid #adadad;
+	padding:7px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-right:2px;
+	color:black;
+	font-style:normal;
+	margin:0px;
+	
+	
+}
+.aui-field-input-select:focus{
+	border-color:#ef5a00;
+	
+}
+
+.oep-multi-select{
+	border: 1px solid rgb(224,224,224);
+	padding:7px;
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-right:2px;
+	color:black;
+	font-style:normal;
+	margin:0px;
+	font-size: 14px;
+	
+	
+}
+.oep-multi-select:focus{
+	border: 1px solid rgb(245,134,52);
+	
+}
+
+body label{
+	display:inline; 
+}
+
+label.oep-label{
+	font-size: 13px;
+	font-style:normal;
+	display:inline;
+}
+label.oep-label-bold{
+	font-size: 13px;
+	font-weight: bold;
+	display:inline;
+}
+
+label.oep-label-red{
+	font-size: 13px; 	
+	font-weight: bold;
+	color: red;
+	display:inline;
+}
+
+label.oep-message-error{
+	font-size: 14px;
+	font-weight: normal;
+	color: red;
+	display:inline;
+}
+
+label.oep-label-error{
+	font-size: 13px;
+	font-style:normal;
+	display:inline-block !important;
+	background-color: #FEE5E2;
+	border: 1px solid #FCACA5;
+	color: #B50303;
+	padding: 7px !important;
+	width: -moz-calc(100% - 16px);
+    width: -webkit-calc(100% - 16px);
+    width: calc(100% - 16px);
+}
+
+label.oep-message-success{
+	font-size: 14px;
+	font-weight: normal;
+	color: green;
+	display:inline;
+}
+
+label.oep-label-note{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	display:inline;
+}
+
+label.oep-label-header{
+	font-size: 18px;
+	font-weight: bold;
+	display:inline;
+}
+
+.oep-calendar{
+border:1px solid #adadad;
+padding:5px 10px;
+
+width:100%;
+background:url(../images/oep/ui/icon-calender-inp.png) no-repeat right 7px;padding-right:30px;
+background-color:#fff;
+}
+
+.oep-timepicker{
+border:1px solid #adadad;
+padding:5px 10px;
+
+width:93.5%;
+background:url(../images/oep/ui/icon-calender-inp.png) no-repeat right 7px;padding-right:30px;
+background-color:#fff;
+}
+
+
+.oep-calendar-hhmm{
+	border:1px solid #adadad;
+	padding:5px 10px;
+	
+	width:100%;
+	background:url(../images/oep/ui/icon-calender-inp.png) no-repeat right 7px;padding-right:30px;
+	background-color:#fff;
+}
+
+.oep-calendar:focus{
+border-color:#ef5a00;
+	
+}
+/** -----------OEP style upload file-----------------**/
+span.oep-uploadfile{
+	overflow:hidden;
+	position:relative;	
+	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+    background-repeat: repeat-x;
+    border-color: #cfcfcf #cfcfcf #b5b5b5;
+    border-image: none;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    margin-right:20px;
+}
+
+span.oep-uploadfile input{
+	opacity:0;filter:alpha(opacity=0);
+	position:absolute;left:0;font-size:20px;
+	cursor:pointer;max-width:100px;top:0;display:block;
+}
+span.oep-uploadfile span{
+	background:url(../images/oep/icons/icon-upload.png) no-repeat 0 6px;
+	color:#000; font-size:13px;height:18px; 
+	padding-left:17px;
+	display:-moz-inline-stack; 
+	display:inline-block;vertical-align:top;zoom:1; }
+
+
+span.oep-label-uploadfile{
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+	margin-left:-18px;
+}
+
+/** -----------OEP style for button-----------------**/
+
+.oep-button{	
+	 -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+    background-repeat: repeat-x;
+    border-color: #cfcfcf #cfcfcf #b5b5b5;
+    border-image: none;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    
+   
+}
+.oep-button:hover{
+ 
+	    
+    text-decoration: none;
+    transition: background-position 0.1s linear 0s;
+     
+}
+
+
+.oep-action{	
+	
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+    background-repeat: repeat-x;
+    border-color: #cfcfcf #cfcfcf #b5b5b5;
+    border-image: none;    
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	
+    cursor: pointer;   
+      
+}
+.mini{
+	font-size: 15px;
+    font-weight: bold;
+    max-height: 30px;
+    padding: 5px;
+    text-align: center;
+    color:#50a2f5;
+    
+}
+.primary {
+    background-color: #50a2f5;
+    background-image: linear-gradient(to bottom, #54aaff, #4a96e8);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.save{
+	background-image: url("../images/oep/icons/save.png") !important;
+	padding-left: 24px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+
+.edit{
+	background-image: url("../images/oep/icons/edit.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+.undo{
+	background-image: url("../images/oep/icons/undo.png") !important;
+	padding-left: 24px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+
+.delete{
+	background-image: url("../images/oep/icons/trash.png") !important;
+	padding-left: 24px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+.search{
+	background-image: url("../images/oep/icons/search.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+.link{
+	background-image: url("../images/oep/icons/link.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+.payment{
+	background-image: url("../images/oep/icons/payment.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+.delete{
+	background-image: url("../images/oep/icons/delete.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+.print{
+	background-image: url("../images/oep/icons/print.png") !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+	
+}
+
+
+/* .vnpost{
+	background-image: url("../images/oep/vnpost/vnpost.png") !important;
+	padding-left: 24px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+} */
+
+.upload{
+	background-image: url("../images/oep/icons/icon-upload.png") !important;	
+	padding-left: 20px !important;
+	background-repeat: no-repeat !important;
+	background-position: 5px center !important;
+	padding: 4px 10px;
+}
+
+
+
+
+
+
+
+/**table for egov**/
+/* table */
+table.oep-table{
+	table-layout: fixed;
+	
+}
+table.oep-table  td{
+	padding:3px 3px;
+	text-align:center;
+	vertical-align: middle;
+	line-height:20px; 
+	word-wrap:break-word;
+	border:1px solid #ddd;
+	text-align:left ;
+	
+	
+}
+table.oep-table  td a{
+	margin-left: 5px;
+}
+
+table.oep-table  td a:VISITED{
+	margin-left: 5px;
+	color: black;
+}
+table.oep-table  th{
+	
+   border:1px solid #ddd;
+
+   font-weight:bold; 
+   height:15px;
+   line-height:15px; 
+   padding:12px 3px;
+   background-color: #f0efef;
+   background-image: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+   color: black;
+   
+}
+
+
+table.oep-table  tr:hover{
+background-color:#ebf5ff
+}
+table.oep-table tr.bgcolor-1{
+text-align:left ;
+}
+table.oep-table  tr.bgcolor-2{
+background-color:rgb(252,252,252);
+}
+
+
+
+
+/*--------------------------------*/
+
+
+
+ul.oep-tab {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom:1px solid #ddd;
+    
+}
+
+
+
+ul.oep-tab li {
+    display: inline;
+    border: solid;
+    border: 0px;
+    margin: 0px;
+    
+}
+
+
+ul.oep-tab li a {
+    padding: 0 10px;
+    min-height: 30px;
+    padding: 13px;
+    text-decoration: none;
+}
+
+
+ul.oep-tab li a.active {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: white none repeat scroll 0 0;
+    border-color: #ddd;
+    border-image: none;
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    margin-bottom: 9px;
+    padding-bottom: 2px;
+}
+
+ul.oep-tab li a:HOVER{
+     -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: white none repeat scroll 0 0;
+    border-color: #ddd;
+    border-image: none;
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    margin-bottom: 9px;
+    padding-bottom: 0;
+	background-color:#ebf5ff;
+}
+
+
+
+	
+/***-----------function----------**/
+
+div.oep-container table.oep-table-function{
+	margin:0px;
+	border:0px;
+	padding: 0px;
+	background:none;
+	margin: 0px;
+	
+}
+table.oep-table-function tr{
+	margin:0px;
+	padding: 0px;
+}
+
+table.oep-table-function tr td{
+	margin:0px;
+	padding:0px;
+	
+	border: 0px;
+	
+}
+table.oep-table-function tr:HOVER{
+	background:none;
+	
+}
+
+
+.wd-accordion h4{ 		
+	    padding: 4px 15px 3px 10px;	    
+	    font-size: 11.5px;
+	
+} 
+   
+.wd-accordion table.wd-table-content td{
+	font-size: 14px;
+    width: 100%;
+}
+.ui-accordion .ui-accordion-content{
+	padding: 0px;
+}
+
+/*************************/
+
+ 
+.ui-tooltip {
+	background-color:white;
+	padding: 1px;
+	padding-left:7px;
+	padding-right:7px;
+	color: red;
+	max-width: 500px;
+	min-width: 100px;
+	width: auto;
+	border: 1px solid red !important;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:13px !important;
+	color:red !important;
+	position: absolute;
+	
+
+}
+
+table.oep-accordion{
+	width: 100%;
+	border: 0px;
+}
+table.oep-accordion tr td h4{
+	background-color: red;
+}
+
+span.oep-status-red{
+	background-color: red;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:black;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+
+span.oep-status-blue{
+	background-color:green;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:white;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+span.oep-status-yellow{
+	background-color:orange;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:black;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+
+span.oep-status-gray{
+	background-color:gray;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:white;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+
+span.oep-status-maroon{
+	background-color:maroon;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:white;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+
+span.oep-status-olive{
+	background-color:olive;
+	font:normal normal 100% Tahoma, Helvetica, sans-serif;
+	font-size:11px;
+	
+	color:white;
+	
+	padding:2px;
+	padding-top: 0px;
+	padding-left:4px;
+	-moz-border-radius:7px 7px 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:7px 7px 7px 7px;
+}
+
+
+
+.oep-textarea{
+	border:1px solid #adadad;
+	font-size:12px;
+	-moz-border-radius:5px;-webkit-border-radius:5px;
+	border-radius:5px
+	}
+
+
+span.oep-label-uploadfile{
+	font-size: 13px;
+	font-style: italic;
+	font-weight: normal;
+	margin-left:-18px;
+}
+
+/***********************************icon************************************************/
+.oep-icon-car{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/car.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+
+.oep-icon-add{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/add_article.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-edit{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/edit.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-delete{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/delete.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-message{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/welcome_message.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-comment{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/conversation.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.comment{	
+	background:url(../images/oep/icons/conversation.png)no-repeat left !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+.oep-icon-copy{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/copy.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.copy{	
+	background:url(../images/oep/icons/copy.png)no-repeat left !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+.oep-icon-download{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/download.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.download{	
+	background:url(../images/oep/icons/upload.png)no-repeat left !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+
+.oep-icon-upload{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/upload.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+
+
+.oep-icon-date{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/date.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-configuration{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/configuration.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.configuration{
+	background:url(../images/oep/icons/configuration.png)no-repeat left !important;
+	padding-left: 26px !important;
+	background-repeat: no-repeat !important;
+	background-position: 3px center !important;
+}
+
+.oep-icon-activate{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/activate.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-deactivate{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/deactivate.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+
+.oep-icon-post{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/post.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-preview{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/preview.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-reply{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/reply.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-check{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/check.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-back{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/back.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-undo{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/undo.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-sitemap{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/sitemap.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-rss{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/rss.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-history{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/history.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-help{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/help.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-home{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/home.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-links{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/links.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-key{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/key.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-lock{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/lock.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-print{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/print.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-category{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/category.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-assign{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/assign.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-folder{
+	width:16px;
+	height:16px;
+	padding:2px;
+	background:url(../images/oep/icons/folder_open.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-filenew{
+	width:24px;
+	height:24px;
+	padding:2px;
+	background:url(../images/oep/icons/file_new.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-fileused{
+	width:24px;
+	height:24px;
+	padding:2px;
+	background:url(../images/oep/icons/file_used.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-fileapproved{
+	width:24px;
+	height:24px;
+	padding:2px;
+	background:url(../images/oep/icons/file_approved.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-send{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/notification/message-add.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-accept{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/icons/accept.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+
+
+.oep-icon-remove{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/icons/remove.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-icon-workflow{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/icons/workflow.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-eform{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/icons/eform.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.oep-icon-money{
+	width:16px;
+	height:16px;	
+	background:url(../images/oep/icons/money.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+
+
+.oep-hoso-files{
+	padding: 4px 3px 3px 20px;
+    border: 1px dotted #abd4f0;
+    background: #dff2ff;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.oep-hoso-files ul{
+	margin: 0px;
+	padding: 0px;	
+}
+
+.oep-hoso-giaybiennhan{
+	max-width:100%;
+	border:1px dotted #cfcfcf;
+	background-color:#fff;
+	margin: 10%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+
+
+
+/***********************************end icon************************************************/
+#oep-menu-left{
+	padding:0px;
+	margin: 0px;
+	background:url(../images/menu/bg-left-content.png);
+	background-repeat: repeat;
+	border:0px solid #dadada;
+	border-bottom:0px solid #dadada;
+	
+	}
+
+#oep-menu-left ul{
+	list-style:none;
+	padding:0px;
+}
+#oep-menu-left ul li{
+	margin:0px;
+	padding: 0px;
+	border:0px solid #337ab7;
+	
+	border-bottom:1px solid #337ab7;
+	border-top:0px solid #337ab7;
+	}
+#oep-menu-left ul li a {
+    color: #000;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding-left: 25px;
+    text-decoration: none;
+    text-shadow: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:0px;
+}
+
+
+#oep-menu-left ul li a span{
+	font-weight:bold
+	}
+#oep-menu-left ul li a:hover{
+	color:#b20007;
+	
+}
+#oep-menu-left ul li a.active{
+	color:#fff;
+	background-color:#337ab7;
+	
+	
+	
+}
+
+#oep-menu-left-children{		
+	width:100%;
+	background-color:white;
+	
+}
+#oep-menu-left-children ul li a{
+    font-weight: normal !important;
+    
+}
+
+a.oep-menu-left-parent{   
+ 	background:url(../images/menu/right.png) no-repeat;
+ 	background-position:  right;
+ 	margin-right: 7px;
+}
+a.oep-menu-left-parent-open{
+   
+ 	background:url(../images/menu/right.png) no-repeat;
+ 	background-position:  right;
+ 	margin-right: 7px;
+}
+
+a.oep-menu-left-parent-down{
+   
+ 	background:url(../images/menu/down.png)no-repeat;
+ 	background-position:  right;
+ 	margin-right: 7px;
+}
+
+#oep-menu-left-children ul li a:hover{
+	
+	color:#fff;
+	background-color:#007da6;
+	
+	
+}
+#oep-menu-left-children ul li a.active{
+	color:#fff;
+	background-color:#337ab7;
+	
+}
+.oep-menu-count {
+    float: right;
+    margin-right: 15px;
+    display: inline-block;
+    padding: 4px 6px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    font-weight: normal !important;
+}
+
+
+.oep-tab-count {    
+    display: inline-block;
+    min-width: 22px;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    border-radius: 13px;
+    margin-left: 4px;
+}
+
+
+/**--------------------for div-area---------------*/
+
+
+
+
+
+
+div.oep-hoso-function{
+	border:1px solid #ddd;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: rgb(249,249,249);
+}
+
+.oep-hoso-notificaton{
+	font-size: 10px;
+	font-weight:normal;
+	color: red;
+	font-style: italic;
+	float: right;
+	text-decoration: underline;
+	padding-top: 4px;
+	background-image: url("../images/oep/icons/inbox.png") ;
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	
+}
+
+div.oep-container-search{
+	background-color: rgb(249,249,249);	
+	border:1px solid #ddd;	
+	min-height: 35px;
+	padding-top: 5px;
+	padding:8px;
+	padding-left:8px;
+	padding-right:8px;
+	margin:0px;
+	margin-bottom: 7px;
+	
+}
+
+div.oep-container-search table{
+	border: 0px;
+}
+div.oep-container-search table td{
+	height: 25px;
+	vertical-align: top;
+	padding-right: 3px;
+	padding-top: 5px;
+}
+.oep-search-advance{
+	vertical-align: bottom;
+	font-size: 13px;
+	font-weight:lighter;
+	font-style: italic;
+	
+	
+}
+/********************ho so **************************/
+
+div.oep-hoso{
+	width:99.5%;
+	background-color:white;
+	border:1px solid #ddd;
+	padding: 3px;
+	background-color: rgb(253,253,253);
+	
+}
+.oep-hoso-online{
+	background-image: url("../images/oep/hoso/online.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+	padding: 0px;
+	margin: 0px;
+	
+	padding-left: 45px;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.oep-hoso-online:VISITED{	
+	color: black;
+}
+.oep-hoso-offline{
+	background-image: url("../images/oep/hoso/offline.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+	padding: 0px;
+	margin: 0px;
+	
+	padding-left: 50px;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.oep-hoso-offline:VISITED{
+	color: black;
+}
+
+
+div.oep-hoso table{
+	border: 0px;
+}
+div.oep-hoso table td{
+	height: 45px;
+	vertical-align: top;
+}
+
+#oep-hoso-tailieudinhkem{
+	width: auto;
+	border: 1px dashed #ddd;
+	border-left: 0px dashed #ddd;
+	border-right: 0px dashed #ddd;
+	
+}
+#oep-hoso-tailieudinhkem tr{
+	border: 0px;
+}
+
+#oep-hoso-tailieudinhkem tr td{
+	border: 0px;
+    border-bottom: 1px dashed #ddd;
+    text-align: left;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    vertical-align: top;
+}
+
+#oep-hoso-tailieudinhkem tr th{
+	border: 0px;
+    border-bottom: 0px dashed #ddd;
+    text-align: left;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.oep-hoso-upload-none{	  
+    background-image: url(../images/oep/hoso/none.png);
+    background-position:left top;
+    background-repeat: no-repeat;
+    padding-left: 35px;   
+    font-size: 15px;
+    
+}
+.oep-hoso-upload-none label{
+	font-size: 16px;
+	
+}
+.oep-hoso-upload-yes{	
+   
+    background-image: url(../images/oep/hoso/yes.png);
+    background-position:left top;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  
+    font-size: 15px;
+    
+  
+}
+
+.oep-hoso-upload-yes label{
+	font-size: 16px;
+	color: #000;
+}
+
+.oep-hoso-upload-yes ul li{
+	border-bottom: 0px dashed #ddd !important;
+	color: royalblue;
+}
+.oep-hoso-upload-form{
+	border-bottom: 1px dotted #ccc;
+    border-top: 0px solid #ccc;
+    border-left: 0px solid #ccc;
+    border-right: 0px solid #ccc;
+    padding: 0px;
+    text-align: left;
+    height: 30px;
+    vertical-align: top;
+    margin-top: 0px;
+    background-color: #dff2ff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(ghostwhite));
+    background-image: -webkit-linear-gradient(top, #dff2ff, ghostwhite);
+    background-image: -moz-linear-gradient(top, #dff2ff, ghostwhite);
+    background-image: -ms-linear-gradient(top, #dff2ff, ghostwhite);
+    background-image: -o-linear-gradient(top, #dff2ff, ghostwhite);
+    background-image: linear-gradient(top, #dff2ff, ghostwhite);
+
+}
+
+.oep-hoso-upload-form-yes{	
+   
+    background-image: url(../images/oep/hoso/form_yes.png);
+    background-position:left top;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  
+    font-size: 17px;
+    font-weight: bold;
+   
+  
+}
+.oep-hoso-upload-form-none{	
+   
+    background-image: url(../images/oep/hoso/form_none.png);
+    background-position:left top;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  
+    font-size: 17px;
+    font-weight: bold;
+   
+  
+}
+
+.oep-hoso-upload-form-func{	
+  
+     padding: 2px;
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 14px;
+    font-style:italic;
+    color: #00aaff !important;
+    padding-left: 25px;
+    float: right;
+    
+}
+
+
+
+
+.oep-hoso-upload-parent{	
+   
+    background-image: url(../images/oep/hoso/parent.png);
+    background-position:left top;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+  
+    font-size: 15px;
+    
+  
+}
+
+.oep-hoso-upload-delete{	
+	background-image: url(../images/oep/hoso/delete.png);
+    background-position: initial;
+    background-repeat: no-repeat;    
+    padding: 2px;
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 14px;
+    font-style:italic;
+    color: #aa0000 !important;
+    padding-left: 25px;
+	
+}
+.oep-hoso-upload-desc{
+	 font-size: 14px;
+     font-style:italic;
+     font-weight:normal;
+     padding:0px;
+     padding-left: 2px;
+     margin: 0px;
+     color: #868686;
+     text-align: justify;
+}
+
+
+
+.oep-hoso-upload-links{	      
+    background-image: url(../images/oep/hoso/links.png);
+    background-position: initial;
+    background-repeat: no-repeat;
+
+    padding: 2px;
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 14px;
+    font-style:italic;
+    color: #00aaff !important;
+    padding-left: 25px;
+  
+}
+.oep-hoso-upload-replace{	
+    background-image: url(../images/oep/hoso/replace.png);
+    background-position: initial;
+    background-repeat: no-repeat;
+     padding: 2px;
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 14px;
+    font-style:italic;
+    color: #00aaff !important;
+    padding-left: 25px;
+    float: right;
+    
+ 
+	
+    
+  
+}
+
+
+
+.pdf{
+	padding-left:20px;
+	
+	font-size:16px;
+	background:url(../images/oep/hoso/pdf.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.word{
+	padding-left:20px;
+	padding-top:5px;
+	
+	
+	background:url(../images/oep/hoso/word.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.exel{
+	padding-left:20px;
+	padding-top:5px;
+	
+	
+	background:url(../images/oep/hoso/exel.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+.other{
+	padding-left:20px;
+	padding-top:5px;
+	
+	
+	background:url(../images/oep/hoso/other.png)no-repeat left !important;
+	cursor: pointer !important; 
+	display: inline-block;
+}
+
+.oep-hoso-title-new{	
+	background-image: url("../images/oep/icons/flag-new-red.png");
+	background-repeat: no-repeat;
+	background-position: top left;	
+	padding: 0px;
+	margin: 0px;
+	
+	padding-left: 15px;
+	font-size: 14px;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+
+.oep-hoso-title-viewed{	
+	background-image: url("../images/oep/icons/flag-new-grey.png");
+	background-repeat: no-repeat;
+	background-position: top left;	
+	padding: 0px;
+	margin: 0px;	
+	padding-left: 15px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+
+label.desc{
+	font-size: 13px;	
+	font-style: italic;
+	padding-left:17px;	
+	background:url(../images/oep/hoso/next.png)no-repeat left !important;
+}
+p.oep-hoso-info{
+	padding: 0px;
+	padding-top: 5px;
+	margin: 0px;
+	font-size: 13px;
+}
+
+p.oep-hoso-info .user{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color:gray;
+	padding: 0px;
+	margin: 0px;
+	
+}
+p.oep-hoso-info .date{
+	font-size: 12px;
+    font-style: italic;
+    color: #9c5e5e;
+    padding: 0;
+    font-weight: bold;
+	
+}
+p.oep-hoso-info .action{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color:gray;
+	padding: 0px;
+	margin: 0px;
+	background:url(../images/oep/hoso/right.png)no-repeat left !important;
+	padding-left: 10px;
+	
+}
+/**-------------notification----------------------*/
+div.oep-notification{
+	width: 100%;	
+	border:1px solid #ddd;	
+	padding: 8px;
+	background-color: rgb(249,249,249);
+    margin: 0px;
+   
+    
+    
+}
+
+div.oep-notification p{
+ 	margin-top: 2px;    
+    font-size: 12px;
+    font-weight: normal;
+    text-align: justify;  
+}
+
+
+div.oep-notification span{
+	float: right;
+	margin-right: 16px;
+	 margin-top: -5px;
+	
+}
+
+div.message-send{
+	background-color:ghostwhite;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0 0 1px #B2B2B2;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    vertical-align: top;
+    word-break: break-all;
+    width: 98%;
+    margin-top: 3px;   
+    margin-bottom: 1px;
+     border-bottom: 1px dotted #ddd;
+     border-top: 0px dotted #ddd;
+}
+div.message-receive{
+	background-color: #FFFFFF;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0 0 1px #B2B2B2;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    vertical-align: top;
+    word-break: break-all;
+    width: 98%;
+    margin-top: 3px;   
+    margin-bottom: 1px;
+     border-bottom: 1px dotted #ddd;
+     border-top: 0px dotted #ddd;
+}
+div.message-send div{
+	background-image:url("../images/oep/notification/send.png");	
+	background-repeat:no-repeat;
+	background-position:left center;
+     width: 100%;
+    margin-top: 2px;
+    padding-left: 18px;
+    font-size: 12px;
+    font-weight: bold; 
+    color: gray;  
+   
+}
+
+
+ div.message-receive div{
+	background-image:url("../images/oep/notification/receive.png");	
+	background-repeat:no-repeat;
+	background-position:left center;
+     width: 100%;
+    margin-top: 2px;
+    padding-left: 18px;
+    font-size: 12px;
+    font-weight: bold; 
+    color: gray;  
+   
+}
+
+/***************accordion *********************/
+.oep-accordion{	
+	padding:0px;
+	margin:0px;
+	border: 1px solid #ddd;
+	
+}
+.oep-accordion .oep-accordion-content {
+	background-color:#fff;
+	padding:0px;
+	margin:0px;
+	min-height:50px;
+	height: auto !important;
+	
+}
+.oep-accordion h4 {
+	background:#f6f6f6 url(../images/oep/accordion/accordion-close.png) no-repeat right center;
+	
+	border-bottom: 1px solid #ddd;
+	border-left:none !important;
+	border-right:none !important;
+	font-size:16px;
+	color:black;
+	cursor:pointer;
+	line-height:30px;
+	overflow:hidden;padding:0px;
+	display:block;
+	text-transform:uppercase;
+	margin: 0px;
+	padding: 3px 15px 3px 10px;	    
+	font-size: 15px;
+	   	
+}
+.oep-accordion h4.ui-state-hover,.oep-accordion h4.ui-state-active{
+background:#dff2ff url(../images/oep/accordion/accordion-open.png) no-repeat right center;
+}
+.oep-accordion h4.ui-state-active{
+	background:#dff2ff url(../images/oep/accordion/accordion-open.png) no-repeat right center;
+}
+.oep-accordion .ui-state-default .ui-icon {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/oep/accordion/title.png") ;
+      background-position: left center !important;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    float: left;
+    height: 18px;
+    margin-top: 3px;
+    padding-left: 4px;
+    text-align: center;
+    width: 18px;
+}
+
+.ui-icon-triangle-1-s {
+    background-position: left center !important;
+}
+.oep-accordion .ui-widget-content{
+	border:none;
+}
+
+.ui-helper-reset {
+   border: 1px solid #ddd;
+    
+}
+
+
+/***************accordion table*********************/
+table.oep-table-accordion{
+	
+	border: 1px solid #ddd;;
+}
+div.oep-table-accordion-content{
+	
+}
+
+
+table.oep-table-accordion tr th{
+	text-align: left;
+	height: 20px;
+	
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	cursor:pointer;
+	background-color: #f0efef;
+   	background-image: linear-gradient(to bottom, #f6f6f6, #eaeaea);
+   	color: black;
+   	background:linear-gradient(to bottom, #f6f6f6, #eaeaea) url(../images/oep/accordion/accordion-open.png) no-repeat right center;
+}
+
+table.oep-table-accordion tr th a{
+	text-decoration: none;
+	cursor:pointer;
+}
+
+
+.noneimage{
+	background-image: url(../images/oep/icons/noneimage.jpg);
+	min-height: 80px;
+	min-width: 80px;
+	width:100%;
+	height:100%; 
+	border: 1px solid black;
+}
+
+
+/*******************label***********************/
+ .label-warning{
+ 	background-color: rgb(255,254,225) !important;
+    background-image: url(../images/oep/icons/warning.png) !important;
+    background-size: 16px auto;
+    background-position: 4px 5px;
+    background-repeat: no-repeat;    
+    border-radius: 2px !important;
+    display: inline-block!important;
+    font-size: 13px !important;
+    font-style:italic;    
+    margin-bottom: 5px;
+    padding:5px;    
+    padding-left: 22px;
+    border: 1px dotted #abd4f0;
+    width: 100%;
+    
+}
+
+.label-info{
+ 	background-color: rgb(237,254,239) !important;
+    background-image: url(../images/oep/icons/info.png) !important;
+    background-size: 16px auto;
+    background-position: 4px 5px;
+    background-repeat: no-repeat;    
+    border-radius: 3px !important;
+    display: inline-block!important;
+    font-size: 13px !important;
+    font-style:italic;    
+    margin-bottom: 5px;
+    padding:5px;    
+    padding-left: 22px;
+    border: 1px dotted #abd4f0;
+    width: 100%;
+    
+}
+
+.label-error{
+ 	background-color: rgb(255,238,236) !important;
+    background-image: url(../images/oep/icons/error.png) !important;
+    background-size: 16px auto;
+    background-position: 4px 5px;
+    background-repeat: no-repeat;    
+    border-radius: 3px !important;
+    display: inline-block!important;
+    font-size: 13px !important;
+    font-style:italic;    
+    margin-bottom: 5px;
+    padding:5px;    
+    padding-left: 22px;
+    border: 1px dotted #abd4f0;
+    width: 100%;
+    
+}
+
+
+/*********************button icon************************/
+
+.oep-button-small{	
+	border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+ 	background-color: #50a2f5;
+    background-image: linear-gradient(to bottom, #54aaff, #4a96e8);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	height:25px;
+	padding:0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	cursor: pointer;
+	  
+   
+}
+
+.oep-button-small:HOVER {
+	background-color: rgb(9,82,155);
+    background-image: linear-gradient(to bottom, #54aaff, #4a96e8);
+}
+
+.upper-case{
+	text-transform:uppercase !important;
+}
+
+/********************************Danh sach dich vu cong cho  doanh nghiep***************/
+div.oep-container-dvc{
+	background-color: rgb(249,249,249);	
+	border:1px solid #ddd;	
+	min-height: 35px;
+	padding: 35px;
+	margin:0px;
+	margin-bottom: 7px;
+	
+}
+.oep-dvc-image{
+	border: 1px solid #E8E9E9;
+    padding: 1px;   
+	cursor:pointer;
+	vertical-align: middle;
+	text-align: justify;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	display: block;
+	
+
+}
+.oep-dvc-image:HOVER{
+  
+   
+    box-shadow:0 0 7px #000;
+    transition: 
+		opacity 0.5s ease-out 0.1s;
+	-moz-transition: 
+		opacity 0.5s ease-out 0.1s;
+	-webkit-transition: 
+		opacity 0.5s ease-out 0.1s;
+}
+.oep-dvc-linhvuc-title{
+	color: #3b5998;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.oep-dvc-linhvuc-desc{
+	color: #868686;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	 
+}
+
+.oep-dvc-muc{
+	color: #3b5998;
+	background-color:rgb(249,249,249);
+	font-weight: bold;
+}
+/********************************Danh sach dich vu cong cho  doanh nghiep***************/
+/********************************oep-breadcrumb***************/
+
+ul.oep-breadcrumbs{
+    overflow: hidden;
+    width: 100%;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: -43px;
+    margin-bottom: 0px;
+}
+
+ul.oep-breadcrumbs li{
+  float: left;
+  margin: 0 .5em 0 1em;
+}
+
+ul.oep-breadcrumbs a{
+  background: #ddd;
+  padding: .3em 1em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+  position: relative;
+ 
+}
+
+ul.oep-breadcrumbs a:hover{
+  background: #50a2f5;
+  cursor: pointer;
+  color: #fff;
+
+}
+
+ul.oep-breadcrumbs a.active{
+  background: #50a2f5;
+  cursor: pointer;
+ 
+  color: #fff;
+}
+
+ul.oep-breadcrumbs a::before{
+  content: "";
+  position: absolute;
+  top: 50%; 
+  margin-top: -1.5em;   
+  border-width: 1.5em 0 1.5em 1em;
+  border-style: solid;
+  border-color: #ddd #ddd #ddd transparent;
+  left: -1em;
+}
+
+ul.oep-breadcrumbs a:hover::before{
+  border-color: #50a2f5 #50a2f5 #50a2f5 transparent;
+}
+
+ul.oep-breadcrumbs a.active::before{
+  border-color: #50a2f5 #50a2f5 #50a2f5 transparent;
+}
+
+ul.oep-breadcrumbs a::after{
+  content: "";
+  position: absolute;
+  top: 50%; 
+  margin-top: -1.5em;   
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid #ddd;
+  right: -1em;
+}
+ul.oep-breadcrumbs a.active::after{
+  border-left-color: #50a2f5;
+  font-weight: bold;
+}
+
+
+ul.oep-breadcrumbs a:hover::after{
+  border-left-color: #50a2f5;
+  font-weight: bold;
+}
+
+ul.oep-breadcrumbs .current,
+ul.oep-breadcrumbs .current:hover{
+  font-weight: bold;
+  background: none;
+  font-weight: bold;
+  font-weight: bold;
+}
+
+ul.oep-breadcrumbs .current::after,
+ul.oep-breadcrumbs .current::before{
+  content: normal;
+  font-weight: bold;
+}
+
+div.oep-container-eform-table{
+	max-width:100%;
+	border:1px dotted #cfcfcf;
+	background-color:#fff;
+	margin:0 auto;	
+	min-height:100px;
+	padding:20px;	
+    overflow:hidden !important;
+	
+}
+
+
+div.oep-container-eform-word{
+	max-width:100%;
+	border:1px dotted #cfcfcf;
+	background-color:#fff;
+	margin:0 auto;	
+	min-height:100px;
+	padding:20px;	
+    overflow:hidden !important;
+	
+}
+
+div.oep-container-eform-word input{
+    border: 0 !important;
+    border-bottom: 1px dotted #000 !important;
+    width: auto!important;
+    float: none;
+    background: 0;
+    padding: 10px 10px 0px 4px
+}
+
+div.oep-container-eform-word select{
+    border: 0 !important;
+    border-bottom: 1px dotted #000 !important;
+    width: auto!important;
+    float: none;
+    background: 0;
+     padding: 10px 10px 0px 4px
+}
+
+/** drop action**/
+
+.dropdown-menu > li{
+	height: 30px;
+}
+.dropdown-menu > li > a {   
+    padding: 6px 0px 23px 23px;
+    font-style: normal;
+   
+}
+
+
+
+.dropdown-menu > li:HOVER {
+	background-color:#ebf5ff
+}
+.oep-select-search{
+	height: 30px;
+	background: white;
+	border: 1px solid #cfcfcf ;
+	
+	
+}
+
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+.headingtext {
+	text-transform: uppercase;
+    border-bottom: solid 1px #21436b;
+    padding-bottom: 5px;
+	margin-bottom: 30px;
+	color: #21436b;
+}

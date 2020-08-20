@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="dtt.vn.user.service.model.AccountLog">
+		<field name="id" type="long" />
+		<field name="accountId" type="long" />
+		<field name="nguoiSuaId" type="long" />
+		<field name="tenNguoiSua" type="String" />
+		<field name="ngaySua" type="Date" />
+		<field name="emailNguoiSua" type="String" />
+		<field name="phienBan" type="long" />
+		<field name="json" type="String" />
+	</model>
+	<model name="dtt.vn.user.service.model.DataImport">
+		<field name="id" type="long" />
+		<field name="screenName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="unit" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="phone" type="String" />
+		<field name="jobTitle" type="String" />
+		<field name="nameRole" type="String" />
+		<field name="numberId" type="String" />
+		<field name="hasImport" type="String" />
+		<field name="errorMsg" type="String" />
+		<field name="insertDate" type="Date" />
+	</model>
+	<model name="dtt.vn.user.service.model.DoiTuongSuDung">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="loai" type="int" />
+		<field name="moTa" type="String" />
+	</model>
+	<model name="dtt.vn.user.service.model.ThongTinCanBo">
+		<field name="id" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="userName" type="String" />
+		<field name="nameRole" type="String" />
+		<field name="noiDung" type="String" />
+	</model>
+	<model name="dtt.vn.user.service.model.ThongTinDangKy">
+		<field name="id" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="userName" type="String" />
+		<field name="soGiayTo" type="String" />
+		<field name="maKichHoat" type="String" />
+		<field name="activeType" type="String" />
+		<field name="doiTuongSuDungId" type="int" />
+		<field name="noiDung" type="String" />
+		<field name="ngayTao" type="Date" />
+	</model>
+</model-hints>

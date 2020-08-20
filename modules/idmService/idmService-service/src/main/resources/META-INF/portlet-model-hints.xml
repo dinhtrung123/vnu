@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="dtt.vn.vnpost.model.Account">
+		<field name="accountId" type="long" />
+		<field name="accountType" type="int" />
+		<field name="accountName" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="fullName" type="String" />
+		<field name="birthdate" type="Date" />
+		<field name="email" type="String" />
+		<field name="telNo" type="String" />
+		<field name="personalId" type="String" />
+		<field name="address" type="String" />
+		<field name="gender" type="int" />
+		<field name="legalDelegate" type="String" />
+		<field name="taxCode" type="String" />
+		<field name="insuranceCode" type="String" />
+		<field name="nationality" type="String" />
+		<field name="ethnicGroup" type="String" />
+		<field name="familyRegNo" type="String" />
+		<field name="maritalStatus" type="int" />
+		<field name="workingPlace" type="String" />
+		<field name="nativePlace" type="String" />
+		<field name="rangeDate" type="Date" />
+		<field name="issuedBy" type="String" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="guardianName" type="String" />
+		<field name="spouseName" type="String" />
+		<field name="headHouseholdName" type="String" />
+		<field name="nation" type="String" />
+		<field name="representativeNumber" type="String" />
+		<field name="representativeName" type="String" />
+		<field name="representativeTelNo" type="String" />
+		<field name="fax" type="String" />
+		<field name="superiorOrganization" type="String" />
+		<field name="note" type="String" />
+		<field name="idDBXM" type="long" />
+		<field name="cityCode" type="String" />
+		<field name="districtCode" type="String" />
+		<field name="wardCode" type="String" />
+		<field name="cityCodeXM" type="String" />
+		<field name="districtCodeXM" type="String" />
+		<field name="wardCodeXM" type="String" />
+		<field name="addressXM" type="String" />
+		<field name="attachFile" type="long" />
+		<field name="accountStatus" type="int" />
+		<field name="processStatus" type="int" />
+		<field name="signImageId" type="long" />
+		<field name="hoSoId" type="long" />
+		<field name="message" type="String" />
+		<field name="assignUserId" type="long" />
+		<field name="ipLevel" type="int" />
+		<field name="reOpen" type="boolean" />
+	</model>
+	<model name="dtt.vn.vnpost.model.DanhMuc">
+		<field name="id" type="long" />
+		<field name="nhomId" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="muc" type="int" />
+		<field name="chaId" type="long" />
+		<field name="thuTuHienThi" type="int" />
+		<field name="maGiaPha" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="dtt.vn.vnpost.model.Nhom">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="mota" type="String" />
+	</model>
+	<model name="dtt.vn.vnpost.model.Photo">
+		<field name="imageId" type="long" />
+		<field name="className" type="String" />
+		<field name="classPK" type="long" />
+		<field name="description" type="String" />
+		<field name="thumbnailId" type="long" />
+		<field name="imageType" type="int" />
+		<field name="contentType" type="String" />
+		<field name="approved" type="boolean" />
+		<field name="uploadDate" type="Date" />
+		<field name="message" type="String" />
+	</model>
+	<model name="dtt.vn.vnpost.model.WorkItem">
+		<field name="workItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="status" type="String" />
+		<field name="statusResponse" type="String" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="accountId" type="long" />
+	</model>
+</model-hints>

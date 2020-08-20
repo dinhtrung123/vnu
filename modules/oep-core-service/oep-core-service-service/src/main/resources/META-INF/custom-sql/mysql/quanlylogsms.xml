@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<custom-sql>
+		 <sql id="org.oep.core.service.persistence.impl.LogSMSFinderImpl.SearchByPhone">
+		<![CDATA[
+            SELECT * FROM oep_logs_sms logsms WHERE
+            1=1
+			[$KEYWORD$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			ORDER BY sent_date_time DESC
+		]]>
+	</sql>
+		<sql id="org.oep.core.service.persistence.impl.LogSMSFinderImpl.CountByPhone">
+		<![CDATA[
+            SELECT COUNT(*) FROM oep_logs_sms logsms
+			WHERE 1=1
+			[$KEYWORD$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+		]]>
+	</sql>
+</custom-sql>

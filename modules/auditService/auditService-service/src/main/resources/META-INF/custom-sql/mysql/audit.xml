@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<custom-sql>
+		<sql id="dtt.vn.audit.service.persistence.impl.AuditEventFinderImpl.searchcustom">
+		<![CDATA[
+            SELECT * FROM audit_auditevent tf
+			WHERE 1=1
+			[$USERNAME$]
+			[$FULLNAME$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			ORDER BY tf.createDate DESC
+		]]>
+	</sql>
+		<sql id="dtt.vn.audit.service.persistence.impl.AuditEventFinderImpl.countcustom">
+		<![CDATA[
+            SELECT COUNT(*) FROM audit_auditevent tf
+			WHERE 1=1
+			[$FULLNAME$]
+			[$USERNAME$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+		]]>
+	</sql>
+</custom-sql>

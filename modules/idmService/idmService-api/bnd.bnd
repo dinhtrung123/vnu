@@ -1,0 +1,9 @@
+Bundle-Name: idmService-api
+Bundle-SymbolicName: dtt.vn.vnpost.api
+
+Export-Package:\
+	dtt.vn.vnpost.exception,\
+	dtt.vn.vnpost.model,\
+	dtt.vn.vnpost.service,\
+	dtt.vn.vnpost.service.persistence
+-includeresource: META-INF/service.xml=../idmService-service/service.xml

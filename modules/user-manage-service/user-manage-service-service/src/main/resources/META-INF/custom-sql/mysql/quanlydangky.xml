@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<custom-sql>
+		<sql id="dtt.vn.user.service.service.persistence.impl.ThongTinDangKyFinderImpl.searchByEmailOrUsername">
+		<![CDATA[
+            SELECT * FROM ttnd_thongtindangky tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			ORDER BY tf.id DESC
+		]]>
+	</sql>
+		<sql id="dtt.vn.user.service.service.persistence.impl.ThongTinDangKyFinderImpl.countByEmailOrUsername">
+		<![CDATA[
+            SELECT COUNT(*) FROM ttnd_thongtindangky tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.user.service.service.persistence.impl.DataImportFinderImpl.searchForImport">
+		<![CDATA[
+            SELECT * FROM idm_dataimport tf
+			WHERE 1=1
+			[$HASIMPORT$]
+			[$SCREENNAME$]
+			[$LASTNAME$]
+			[$EMAIL$]
+			[$ROLE$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			ORDER BY tf.id DESC
+		]]>
+		</sql>
+		
+		<sql id="dtt.vn.user.service.service.persistence.impl.DataImportFinderImpl.countForImport">
+		<![CDATA[
+            SELECT COUNT(*) FROM idm_dataimport tf
+			WHERE 1=1
+			[$HASIMPORT$]
+			[$SCREENNAME$]
+			[$LASTNAME$]
+			[$EMAIL$]
+			[$ROLE$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+		]]>
+		</sql>
+</custom-sql>

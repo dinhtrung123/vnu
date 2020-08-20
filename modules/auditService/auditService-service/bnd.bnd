@@ -1,0 +1,6 @@
+Bundle-Name: auditService-service
+Bundle-SymbolicName: dtt.vn.audit.service
+
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+Export-Package: dtt.vn.audit.exception

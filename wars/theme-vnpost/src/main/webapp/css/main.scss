@@ -1,0 +1,45 @@
+@import "imports";
+
+@import "base";
+
+@import "portal";
+
+@import "taglib";
+
+@import "application";
+
+@import "layout";
+
+@import "navigation";
+
+@import "portlet";
+
+@import "extras";
+
+@import "custom";
+
+@import url(vnpost.css);
+
+.selected {
+	font-weight: bold
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+.bg-page {
+	/* background: rgba(203, 203, 210, 0.15);
+	padding-bottom: 20px; */
+}
+
+.control-panel {
+	padding-top: 40px;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="dtt.vn.vnpost.service.impl.AccountLocalServiceImpl" id="dtt.vn.vnpost.service.AccountLocalService" />
+	<bean class="dtt.vn.vnpost.service.impl.AccountServiceImpl" id="dtt.vn.vnpost.service.AccountService" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.AccountPersistenceImpl" id="dtt.vn.vnpost.service.persistence.AccountPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl" id="dtt.vn.vnpost.service.persistence.AccountFinder" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.impl.DanhMucLocalServiceImpl" id="dtt.vn.vnpost.service.DanhMucLocalService" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.DanhMucPersistenceImpl" id="dtt.vn.vnpost.service.persistence.DanhMucPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.impl.NhomLocalServiceImpl" id="dtt.vn.vnpost.service.NhomLocalService" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.NhomPersistenceImpl" id="dtt.vn.vnpost.service.persistence.NhomPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.impl.PhotoLocalServiceImpl" id="dtt.vn.vnpost.service.PhotoLocalService" />
+	<bean class="dtt.vn.vnpost.service.impl.PhotoServiceImpl" id="dtt.vn.vnpost.service.PhotoService" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.PhotoPersistenceImpl" id="dtt.vn.vnpost.service.persistence.PhotoPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.impl.WorkItemLocalServiceImpl" id="dtt.vn.vnpost.service.WorkItemLocalService" />
+	<bean class="dtt.vn.vnpost.service.impl.WorkItemServiceImpl" id="dtt.vn.vnpost.service.WorkItemService" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.WorkItemPersistenceImpl" id="dtt.vn.vnpost.service.persistence.WorkItemPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.vnpost.service.persistence.impl.WorkItemFinderImpl" id="dtt.vn.vnpost.service.persistence.WorkItemFinder" parent="basePersistence" />
+</beans>

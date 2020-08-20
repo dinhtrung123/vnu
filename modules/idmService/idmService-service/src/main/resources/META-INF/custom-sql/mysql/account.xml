@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<custom-sql>
+		<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.searchByStatus">
+		<![CDATA[
+            SELECT * FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$STATUS$]
+			[$TYPE$]
+			[$ACCSTARTUS$]
+			ORDER BY tf.accountId DESC
+		]]>
+	</sql>
+		<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.countByStatus">
+		<![CDATA[
+			SELECT COUNT(*) FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$STATUS$]
+			[$TYPE$]
+			[$ACCSTARTUS$]
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.searchForDanhSach">
+		<![CDATA[
+            SELECT * FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$CANBOXACMINH$]
+			[$TINHTRANG$]
+			ORDER BY tf.accountId DESC
+		]]>
+	</sql>
+		<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.countForDanhSach">
+		<![CDATA[
+			SELECT COUNT(*) FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$CANBOXACMINH$]
+			[$TINHTRANG$]
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.searchForXacMinh">
+		<![CDATA[
+            SELECT * FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$TINHTRANG$]
+			[$EMAIL$]
+			ORDER BY tf.accountId DESC
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.countForXacMinh">
+		<![CDATA[
+            SELECT COUNT(*) FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$TINHTRANG$]
+			[$EMAIL$]
+		]]>
+	</sql>
+	
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.searchForPheDuyet">
+		<![CDATA[
+            SELECT * FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$TINHTRANG$]
+			[$EMAIL$]
+			ORDER BY tf.accountId DESC
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.countForPheDuyet">
+		<![CDATA[
+            SELECT COUNT(*) FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$HINHTHUCDANGKY$]
+			[$SOGIAYTO$]
+			[$TUNGAY$]
+			[$DENNGAY$]
+			[$SODIENTHOAI$]
+			[$TENTAIKHOAN$]
+			[$LOAIDOITUONG$]
+			[$TINHTRANG$]
+			[$EMAIL$]
+		]]>
+	</sql>
+	
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.countAccount">
+		<![CDATA[
+			SELECT COUNT(*) FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$EMAIL$]
+			[$USERNAME$]
+			[$FULLNAME$]
+			[$TELNO$]
+			[$TINHTRANG$]
+		]]>
+	</sql>
+	<sql id="dtt.vn.vnpost.service.persistence.impl.AccountFinderImpl.searchAccount">
+		<![CDATA[
+			SELECT * FROM idm_account tf
+			WHERE 1=1
+			[$KEYWORD$]
+			[$EMAIL$]
+			[$USERNAME$]
+			[$FULLNAME$]
+			[$TELNO$]
+			[$TINHTRANG$]
+			ORDER BY tf.accountId DESC
+		]]>
+	</sql>
+</custom-sql>

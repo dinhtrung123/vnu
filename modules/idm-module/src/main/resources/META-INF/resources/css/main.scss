@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+ .aui .btn-danger {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #f1331e;
+    background-image: -moz-linear-gradient(top, #f53924, #ed2c17);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f53924), to(#ed2c17));
+    background-image: -webkit-linear-gradient(top, #f53924, #ed2c17);
+    background-image: -o-linear-gradient(top, #f53924, #ed2c17);
+    background-image: linear-gradient(to bottom, #f53924, #ed2c17);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF53924', endColorstr='#FFED2C17', GradientType=0);
+    border-color: #ed2c17 #ed2c17 #aa1d0d;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #ed2c17;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+    .aui .btn-danger:hover, .aui .btn-danger:focus, .aui .btn-danger:active, .aui .btn-danger.active, .aui .btn-danger.disabled, .aui .btn-danger[disabled] {
+      color: white;
+      background-color: #ed2c17;
+      *background-color: #da2511; }
+    .aui .btn-danger:active, .aui .btn-danger.active {
+      background-color: #c2210f \9; }
+
+.aui .btn-success {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #0cc523;
+    background-image: -moz-linear-gradient(top, #0ecd27, #0aba1d);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0ecd27), to(#0aba1d));
+    background-image: -webkit-linear-gradient(top, #0ecd27, #0aba1d);
+    background-image: -o-linear-gradient(top, #0ecd27, #0aba1d);
+    background-image: linear-gradient(to bottom, #0ecd27, #0aba1d);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0ECD27', endColorstr='#FF0ABA1D', GradientType=0);
+    border-color: #0aba1d #0aba1d #067112;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0aba1d;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+    .aui .btn-success:hover, .aui .btn-success:focus, .aui .btn-success:active, .aui .btn-success.active, .aui .btn-success.disabled, .aui .btn-success[disabled] {
+      color: white;
+      background-color: #0aba1d;
+      *background-color: #09a219; }
+    .aui .btn-success:active, .aui .btn-success.active {
+      background-color: #078a15 \9; }
+      

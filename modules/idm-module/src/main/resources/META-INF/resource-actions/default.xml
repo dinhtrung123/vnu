@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action  
+Mapping 7.1.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_1_0.dtd">
+ <resource-action-mapping>
+     <portlet-resource>
+         <portlet-name>account</portlet-name>
+         <permissions>
+            <supports>               
+                <action-key>VIEW</action-key>
+                <action-key>ADD_VERIFY</action-key>
+            </supports>
+            <community-defaults/>
+            <guest-defaults>
+                <action-key>VIEW</action-key>
+            </guest-defaults>
+            <guest-unsupported>               
+                <action-key>VIEW</action-key>
+                <action-key>ADD_VERIFY</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+    
+    <model-resource>
+		<model-name>org.oep.idm.dao.account.model.Account</model-name>
+		<portlet-ref>
+			<portlet-name>account</portlet-name>
+		</portlet-ref>
+		<permissions>
+		<supports>
+			<action-key>DELETE</action-key>
+			<action-key>PERMISSIONS</action-key>
+			<action-key>UPDATE</action-key>
+			<action-key>VIEW</action-key>
+		</supports>
+		<community-defaults>
+			<action-key>VIEW</action-key>
+		</community-defaults>
+		<guest-defaults>
+			<action-key>VIEW</action-key>
+		</guest-defaults>
+		<guest-unsupported>
+			<action-key>UPDATE</action-key>
+		</guest-unsupported>
+		</permissions>
+	</model-resource>
+</resource-action-mapping>

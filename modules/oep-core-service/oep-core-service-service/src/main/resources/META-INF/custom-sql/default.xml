@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<custom-sql>
+
+
+<!-- mysql  -->
+
+	<sql file="META-INF/custom-sql/mysql/thamso.xml" />
+	<sql file="META-INF/custom-sql/mysql/trungtamhanhchinh.xml" />
+	<sql file="META-INF/custom-sql/mysql/quanlylogsms.xml" />
+</custom-sql>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="dtt.vn.user.service.service.impl.AccountLogLocalServiceImpl" id="dtt.vn.user.service.service.AccountLogLocalService" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.AccountLogPersistenceImpl" id="dtt.vn.user.service.service.persistence.AccountLogPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.impl.DataImportLocalServiceImpl" id="dtt.vn.user.service.service.DataImportLocalService" />
+	<bean class="dtt.vn.user.service.service.impl.DataImportServiceImpl" id="dtt.vn.user.service.service.DataImportService" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.DataImportPersistenceImpl" id="dtt.vn.user.service.service.persistence.DataImportPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.DataImportFinderImpl" id="dtt.vn.user.service.service.persistence.DataImportFinder" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.impl.DoiTuongSuDungLocalServiceImpl" id="dtt.vn.user.service.service.DoiTuongSuDungLocalService" />
+	<bean class="dtt.vn.user.service.service.impl.DoiTuongSuDungServiceImpl" id="dtt.vn.user.service.service.DoiTuongSuDungService" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.DoiTuongSuDungPersistenceImpl" id="dtt.vn.user.service.service.persistence.DoiTuongSuDungPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.impl.ThongTinCanBoLocalServiceImpl" id="dtt.vn.user.service.service.ThongTinCanBoLocalService" />
+	<bean class="dtt.vn.user.service.service.impl.ThongTinCanBoServiceImpl" id="dtt.vn.user.service.service.ThongTinCanBoService" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.ThongTinCanBoPersistenceImpl" id="dtt.vn.user.service.service.persistence.ThongTinCanBoPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.impl.ThongTinDangKyLocalServiceImpl" id="dtt.vn.user.service.service.ThongTinDangKyLocalService" />
+	<bean class="dtt.vn.user.service.service.impl.ThongTinDangKyServiceImpl" id="dtt.vn.user.service.service.ThongTinDangKyService" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.ThongTinDangKyPersistenceImpl" id="dtt.vn.user.service.service.persistence.ThongTinDangKyPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.user.service.service.persistence.impl.ThongTinDangKyFinderImpl" id="dtt.vn.user.service.service.persistence.ThongTinDangKyFinder" parent="basePersistence" />
+</beans>

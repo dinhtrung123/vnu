@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+ <!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 7.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_7_0_0.dtd">
+
+<routes>
+    <route>
+       <pattern>/{actionName}/maKichHoat/{maKichHoatMD5}</pattern>
+       <generated-parameter name="javax.portlet.action">{actionName}</generated-parameter>
+        <generated-parameter name="maKichHoatMD5">{maKichHoatMD5}</generated-parameter>
+        <ignored-parameter name="p_p_id"/>
+        <ignored-parameter name="p_p_col_id"/>
+        <ignored-parameter name="p_p_col_count"/>
+		<ignored-parameter name="p_auth"/>
+       <implicit-parameter name="p_p_lifecycle">1</implicit-parameter>
+        <implicit-parameter name="p_p_state">normal</implicit-parameter>
+        <implicit-parameter name="p_p_mode">view</implicit-parameter>
+    </route>
+</routes>

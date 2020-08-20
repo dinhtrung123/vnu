@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="dtt.vn.vnpost">
+	<namespace>idm</namespace>
+	<entity name="Account" local-service="true" remote-service="true" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="accountId" type="long" primary="true"></column>
+		<column name="accountType" type="int"></column>
+		<column name="accountName" type="String"></column>
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="groupId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="fullName" type="String"></column>
+		<column name="birthdate" type="Date"></column>
+		<column name="email" type="String"></column>
+		<column name="telNo" type="String"></column>
+		<column name="personalId" type="String"></column>
+		<column name="address" type="String"></column>
+		<column name="gender" type="int"></column>
+		<column name="legalDelegate" type="String"></column>
+		<column name="taxCode" type="String"></column>
+		<!-- Bao hiem -->
+		<column name="insuranceCode" type="String"></column>
+		<!-- Quoc tich -->
+		<column name="nationality" type="String"></column>
+		<!-- Dan toc -->
+		<column name="ethnicGroup" type="String"></column>
+		<!-- Ho khau -->
+		<column name="familyRegNo" type="String"></column>
+		<!-- Tinh trang hon nhan -->
+		<column name="maritalStatus" type="int"></column>
+		<!-- Noi cong tac -->
+		<column name="workingPlace" type="String"></column>
+		<!-- Noi Sinh -->
+		<column name="nativePlace" type="String"></column>
+		<!-- Ngay cap -->
+		<column name="rangeDate" type="Date"></column>
+		<!-- Noi cap -->
+		<column name="issuedBy" type="String"></column>
+		<!-- Ho ten cha -->
+		<column name="fatherName" type="String"></column>
+		<!-- Ho ten me -->
+		<column name="motherName" type="String"></column>
+		<!-- Ho ten nguoi giam ho -->
+		<column name="guardianName" type="String"></column>
+		<!-- Ho ten vo/chong -->
+		<column name="spouseName" type="String"></column>
+		<!-- Ho ten chu ho -->
+		<column name="headHouseholdName" type="String"></column>
+		<!-- Quoc gia -->
+		<column name="nation" type="String"></column>
+		<!-- SGT nguoi dai dien -->
+		<column name="representativeNumber" type="String"></column>
+		<!-- Ho ten nguoi dai dien -->
+		<column name="representativeName" type="String"></column>
+		<!-- SDT nguoi dai dien -->
+		<column name="representativeTelNo" type="String"></column>
+		<!-- Fax -->
+		<column name="fax" type="String"></column>
+		<!-- To chuc cap tren -->
+		<column name="superiorOrganization" type="String"></column>
+		<!-- Ghi chu -->
+		<column name="note" type="String"></column>
+		
+		<!-- ID CSDL Xac Minh -->
+		<column name="idDBXM" type="long"></column>
+		
+		<column name="cityCode" type="String"></column>
+		<column name="districtCode" type="String"></column>
+		<column name="wardCode" type="String"></column>
+		
+		<column name="cityCodeXM" type="String"></column>
+		<column name="districtCodeXM" type="String"></column>
+		<column name="wardCodeXM" type="String"></column>
+		<column name="addressXM" type="String"></column>
+		
+		<column name="attachFile" type="long"></column>
+		<column name="accountStatus" type="int"></column>
+		<column name="processStatus" type="int"></column>
+		<column name="signImageId" type="long"></column>
+		<column name="hoSoId" type="long"></column>
+		<column name="message" type="String"></column>
+		<column name="assignUserId" type="long"></column>
+		<column name="ipLevel" type="int"></column>
+		<column name="reOpen" type="boolean"></column>
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="accountType" return-type="Collection">
+			<finder-column name="accountType"></finder-column>
+		</finder>
+		<finder name="phone" return-type="Collection">
+			<finder-column name="telNo"></finder-column>
+		</finder>
+		<finder name="mst" return-type="Collection">
+			<finder-column name="taxCode"></finder-column>
+		</finder>
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="GS" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="accountStatus"></finder-column>
+		</finder>
+		<finder name="GSC" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="accountStatus"></finder-column>
+			<finder-column name="cityCode"></finder-column>
+		</finder>
+		<finder name="GSD" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="accountStatus"></finder-column>
+			<finder-column name="districtCode"></finder-column>
+		</finder>
+		<finder name="GSW" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="accountStatus"></finder-column>
+			<finder-column name="wardCode"></finder-column>
+		</finder>
+		<finder return-type="Account" name="Email">
+			<finder-column name="email"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="GN">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="fullName" comparator="LIKE"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="GNS">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="fullName" comparator="LIKE"></finder-column>
+			<finder-column name="accountStatus"></finder-column>
+		</finder>
+		<finder return-type="Account" name="PersonalId">
+			<finder-column name="personalId"></finder-column>
+		</finder>
+		<finder return-type="Account" name="userId">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		<finder return-type="Account" name="accountName">
+			<finder-column name="accountName"></finder-column>
+		</finder>
+		<finder return-type="Account" name="HoSoId">
+			<finder-column name="hoSoId"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="Status">
+			<finder-column name="accountStatus" arrayable-operator="OR"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Photo" table="idm_photo" remote-service="true" local-service="true" >
+		<column name="imageId" type="long" primary="true"></column>
+		<column name="className" type="String"></column>
+		<column name="classPK" type="long"></column>
+		<column name="description" type="String"></column>
+		<column name="thumbnailId" type="long"></column>
+		<column name="imageType" type="int"></column>
+		<column name="contentType" type="String"></column>
+		<column name="approved" type="boolean"></column>
+		<column name="uploadDate" type="Date"></column>
+		<column name="message" type="String"></column>
+		<finder return-type="Collection" name="ClassNameClassPKImageType">
+			<finder-column name="className"></finder-column>
+			<finder-column name="classPK"></finder-column>
+			<finder-column name="imageType"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="ClassNameClassPK">
+			<finder-column name="className"></finder-column>
+			<finder-column name="classPK"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="ClassName">
+			<finder-column name="className"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="ClassPK">
+			<finder-column name="classPK"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="ImageTypeClassPK">
+			<finder-column name="imageType"></finder-column>
+			<finder-column name="classPK"></finder-column>
+		</finder>
+		<reference entity="Image" package-path="com.liferay.portal"></reference>
+	</entity>
+	<entity name="Nhom" table="data_group" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true"></column>
+		<column name="ma" db-name="ma" type="String"></column>
+		<column name="ten" db-name="ten" type="String"></column>
+		<column name="mota" db-name="mota" type="String"></column>
+		<finder name="Ma" return-type="Nhom">
+			<finder-column name="ma"></finder-column>
+		</finder>
+	</entity>
+	<entity name="DanhMuc" table="data_item" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true"></column>
+		<column name="nhomId" db-name="nhom_id" type="long"></column>
+		<column name="ma" db-name="ma" type="String"></column>
+		<column name="ten" db-name="ten" type="String"></column>
+		<column name="moTa" db-name="mota" type="String"></column>
+		<column name="muc" db-name="muc" type="int"></column>
+		<column name="chaId" db-name="cha_id" type="long"></column>
+		<column name="thuTuHienThi" db-name="thutu_hienthi" type="int"></column>
+		<column name="maGiaPha" db-name="ma_giapha" type="String"></column>
+		<column name="trangThai" db-name="trangthai" type="boolean"></column>
+		<order>
+			<order-column name="thuTuHienThi" order-by="asc"></order-column>
+			<order-column name="ten" order-by="asc"></order-column>
+		</order>
+		<finder name="M" return-type="DanhMuc">
+			<finder-column name="ma"></finder-column>
+		</finder>
+		<finder name="T" return-type="DanhMuc">
+			<finder-column name="ten"></finder-column>
+		</finder>
+		<finder name="P_T" return-type="DanhMuc">
+			<finder-column name="chaId"></finder-column>
+			<finder-column name="ten"></finder-column>
+		</finder>
+		<finder name="Cha_TrangThai" return-type="Collection">
+			<finder-column name="chaId"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder name="ChaId" return-type="Collection">
+			<finder-column name="chaId"></finder-column>
+		</finder>
+		<finder name="MUC" return-type="Collection">
+			<finder-column name="muc"></finder-column>
+		</finder>
+		<finder name="NhomID" return-type="Collection">
+			<finder-column name="nhomId"></finder-column>
+		</finder>
+		<finder return-type="DanhMuc" name="TT">
+			<finder-column name="thuTuHienThi"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="NhomId_TrangThai">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder return-type="DanhMuc" name="Ma_TrangThai">
+			<finder-column name="ma"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder name="Ma_Muc" return-type="Collection">
+			<finder-column name="ma"></finder-column>
+			<finder-column name="muc"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="ChaId_Muc">
+			<finder-column name="chaId"></finder-column>
+			<finder-column name="muc"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="NhomId_Muc_TrangThai">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="muc"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder return-type="DanhMuc" name="NhomId_Muc_Ten_TrangThai">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="muc"></finder-column>
+			<finder-column name="ten"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder return-type="DanhMuc" name="NhomId_Muc_Ma_TrangThai">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="muc"></finder-column>
+			<finder-column name="ma"></finder-column>
+			<finder-column name="trangThai"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="Ids">
+			<finder-column name="id" arrayable-operator="OR"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="NhomId_Muc">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="muc"></finder-column>
+		</finder>
+		<finder return-type="DanhMuc" name="NhomId_Ma">
+			<finder-column name="nhomId"></finder-column>
+			<finder-column name="ma"></finder-column>
+		</finder>
+	</entity>
+	<entity name="WorkItem" table="idm_workitem" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="workItemId" type="long" primary="true" id-type="increment"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- List fields -->
+		<column name="title" type="String"></column>
+		<column name="status" type="String"></column>
+		<column name="statusResponse" type="String"></column>
+		<column name="startTime" type="Date"></column>
+		<column name="endTime" type="Date"></column>
+		<!-- Workflow Definition -->
+		<column name="accountId" type="long"></column>
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="Title" return-type="Collection">
+			<finder-column name="title" comparator="LIKE"></finder-column>
+		</finder>
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		<finder name="QuaTrinhXuLy" return-type="Collection" where="userId is not null AND userId &gt; 0">
+			<finder-column name="accountId"></finder-column>
+		</finder>
+	</entity>
+</service-builder>

@@ -1,0 +1,17 @@
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+<%@page import="com.liferay.portal.kernel.bean.BeanParamUtil"%>
+<%@page import="dtt.vn.account.business.Constantes"%>
+<%@page import="dtt.vn.vnpost.service.DanhMucLocalServiceUtil"%>
+<%@page import="dtt.vn.vnpost.model.DanhMuc"%>
+<%@page import="dtt.vn.account.util.DateUtil"%>
+<%@page import="dtt.vn.vnpost.model.Account"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.liferay.portal.kernel.language.LanguageUtil"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="com.liferay.portal.kernel.util.Validator"%>
+<%@page import="com.liferay.portal.kernel.util.Constants"%>
+<%@ include file="/accountportlet/init.jsp" %>

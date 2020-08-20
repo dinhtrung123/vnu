@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="org.oep.core.service.impl.LogSMSLocalServiceImpl" id="org.oep.core.service.LogSMSLocalService" />
+	<bean class="org.oep.core.service.impl.LogSMSServiceImpl" id="org.oep.core.service.LogSMSService" />
+	<bean class="org.oep.core.service.persistence.impl.LogSMSPersistenceImpl" id="org.oep.core.service.persistence.LogSMSPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.persistence.impl.LogSMSFinderImpl" id="org.oep.core.service.persistence.LogSMSFinder" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.MailLocalServiceImpl" id="org.oep.core.service.MailLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.MailPersistenceImpl" id="org.oep.core.service.persistence.MailPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.MappingVmapLocalServiceImpl" id="org.oep.core.service.MappingVmapLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.MappingVmapPersistenceImpl" id="org.oep.core.service.persistence.MappingVmapPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.PhanQuyenLocalServiceImpl" id="org.oep.core.service.PhanQuyenLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.PhanQuyenPersistenceImpl" id="org.oep.core.service.persistence.PhanQuyenPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.ThamSoLocalServiceImpl" id="org.oep.core.service.ThamSoLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.ThamSoPersistenceImpl" id="org.oep.core.service.persistence.ThamSoPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.persistence.impl.ThamSoFinderImpl" id="org.oep.core.service.persistence.ThamSoFinder" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.ThamSoLoaiLocalServiceImpl" id="org.oep.core.service.ThamSoLoaiLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.ThamSoLoaiPersistenceImpl" id="org.oep.core.service.persistence.ThamSoLoaiPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.impl.TrungTamHanhChinhLocalServiceImpl" id="org.oep.core.service.TrungTamHanhChinhLocalService" />
+	<bean class="org.oep.core.service.persistence.impl.TrungTamHanhChinhPersistenceImpl" id="org.oep.core.service.persistence.TrungTamHanhChinhPersistence" parent="basePersistence" />
+	<bean class="org.oep.core.service.persistence.impl.TrungTamHanhChinhFinderImpl" id="org.oep.core.service.persistence.TrungTamHanhChinhFinder" parent="basePersistence" />
+</beans>

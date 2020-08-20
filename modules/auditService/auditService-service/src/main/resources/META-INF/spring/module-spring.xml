@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="dtt.vn.audit.service.impl.AuditEventLocalServiceImpl" id="dtt.vn.audit.service.AuditEventLocalService" />
+	<bean class="dtt.vn.audit.service.persistence.impl.AuditEventPersistenceImpl" id="dtt.vn.audit.service.persistence.AuditEventPersistence" parent="basePersistence" />
+	<bean class="dtt.vn.audit.service.persistence.impl.AuditEventFinderImpl" id="dtt.vn.audit.service.persistence.AuditEventFinder" parent="basePersistence" />
+</beans>

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="org.oep.core">
+	<author>manhlb</author>
+	<namespace>oep</namespace>
+	
+	<entity name="ThamSo" table="oep_thamso" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true"/>
+		
+		<column name="groupId" db-name="group_id" type="long"/>
+		<column name="className" db-name="classname" type="String"/>
+		<column name="classPK" db-name="classpk" type="long"/>
+		<column name="loaiId" db-name="loai_id" type="long"/>				
+		<column name="ma" db-name="ma" type="String"/>
+		<column name="giaTri" db-name="giatri" type="String"/>
+		<column name="moTa" db-name="mota" type="String"/>
+		<column name="trangThai" db-name="trangthai" type="boolean"/>
+		<column name="quyenTacDong" db-name="quyen_tac_dong" type="int"/>
+		
+		<finder return-type="ThamSo" name="G_M">
+			<finder-column name="groupId"/>
+			<finder-column name="ma"/>
+		</finder>
+		
+		<finder return-type="ThamSo" name="M_CL">			
+			<finder-column name="ma"/>
+			<finder-column name="className"/>
+		</finder>
+		
+		<finder return-type="ThamSo" name="M_CL_PK">			
+			<finder-column name="ma"/>
+			<finder-column name="className"/>
+			<finder-column name="classPK"/>
+		</finder>
+		
+		<finder return-type="Collection" name="Ma">			
+			<finder-column name="ma"/>
+		</finder>
+		
+		<finder return-type="Collection" name="giaTri">			
+			<finder-column name="giaTri"/>
+		</finder>
+		
+		<finder return-type="Collection" name="GroupId">
+			<finder-column name="groupId"/>
+		</finder>
+		
+		
+	</entity>
+	<entity name="LogSMS" table="oep_logs_sms" local-service="true" remote-service="true">
+		<column name="id" db-name="id" type="long" primary="true"/>
+		
+		<column name="sentDateTime" db-name="sent_date_time" type="Date"/>
+		<column name="phone" db-name="phone" type="String"/>
+		<column name="responseDate" db-name="response_date" type="Date"/>
+		<column name="errorCode" db-name="error_code" type="String"/>				
+		<column name="errorDetail" db-name="error_detail" type="String"/>
+		<column name="messageId" db-name="message_id" type="long"/>
+	
+		<order>
+			<order-column name="sentDateTime" order-by="desc"/>
+		</order>
+	
+	</entity>
+	
+	<entity name="ThamSoLoai" table="oep_thamso_loai" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		
+		<column name="ma" db-name="ma" type="String"/>
+		<column name="ten" db-name="ten" type="String" />
+		<column name="moTa" db-name="mota" type="String"/>
+		
+		<finder return-type="Collection" name="Ten">
+			<finder-column name="ten"/>
+		</finder>
+	</entity>
+	
+	<entity name="Mail" local-service="true" remote-service="false" table="oep_mail_history">
+		<column name="id" type="long" primary="true" db-name="id"/>		
+		<column name="groupId" type="long" db-name="group_id"/>
+		<column name="code" type="String" db-name="ma"/>
+		<column name="toAddress" type="String" db-name="to_address"/>
+		<column name="subject" type="String" db-name="subject"/>
+		<column name="body" type="String" db-name="body"/>
+		<column name="ngayGui" type="Date" db-name="ngaygui"/>
+		<column name="trangThai" type="boolean" db-name="trangthai"/>		
+	</entity>
+	
+	<entity name="PhanQuyen" local-service="true" remote-service="false" table="idm_phanquyen">
+		<column name="id" type="long" primary="true" db-name="id"/>
+		<column name="classname" type="String" db-name="classname"/>
+		<column name="classpk" type="long" db-name="classpk"/>
+		<column name="giatri" type="String" db-name="giatri"/>
+		<order by="desc">
+			<order-column name="id"/>
+		</order>
+		
+		<finder name="CN_PK" return-type="PhanQuyen">
+			<finder-column name="classname"/>
+			<finder-column name="classpk"/>		
+		</finder>
+		
+	</entity>
+	
+	<entity name="TrungTamHanhChinh" table="idm_trungtamhanhchinh" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="ma" db-name="ma" type="String"/>
+		<column name="ten" db-name="ten" type="String"/>
+		<column name="donViId" db-name="donvi_id" type="long"/>
+		<column name="donViIds" db-name="donvi_ids" type="String"/>
+		<column name="thongTinLienHe" db-name="thongtin_lienhe" type="String"/>
+		<column name="trangThai" db-name="trangthai" type="int"/>
+		
+		<order>
+			<order-column name="id"  order-by="asc"/>
+		</order>
+		
+		<finder name="Ma" return-type="TrungTamHanhChinh">
+			<finder-column name="ma"/>
+		</finder>
+		<finder name="donViId" return-type="TrungTamHanhChinh">
+			<finder-column name="donViId"/>
+		</finder>
+	</entity>
+	
+	<entity name="MappingVmap" table="idm_mappingvmap" local-service="true" remote-service="false">
+		<column name="id" db-name="id" type="long" primary="true" />
+		<column name="classpk" type="long" db-name="classpk"/>
+		<column name="classname" type="String" db-name="classname"/>
+		<column name="latitude" type="String" db-name="latitude"/>
+		<column name="longitude" type="String" db-name="longitude"/>
+		<column name="ghichu" type="String" db-name="ghichu"/>
+		<order by="desc">
+			<order-column name="id"/>
+		</order>
+		<finder name="CN_PK" return-type="MappingVmap">
+			<finder-column name="classname"/>
+			<finder-column name="classpk"/>		
+		</finder>
+		<finder name="PK" return-type="MappingVmap">
+			<finder-column name="classpk"/>
+		</finder>
+		
+	</entity>
+	
+	
+    <exceptions>
+        <exception>NotPermission</exception>
+        <exception>NotFound</exception>
+        <exception>Duplicate</exception>
+        <exception>NotIdentified</exception>
+    </exceptions>
+</service-builder>

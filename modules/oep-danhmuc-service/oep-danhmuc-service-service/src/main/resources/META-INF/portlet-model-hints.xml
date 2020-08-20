@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="org.oep.danhmuc.model.DanhMuc">
+		<field name="id" type="long" />
+		<field name="nhomId" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="moTa" type="String" />
+		<field name="muc" type="int" />
+		<field name="chaId" type="long" />
+		<field name="thuTuHienThi" type="int" />
+		<field name="maGiaPha" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="org.oep.danhmuc.model.Nhom">
+		<field name="id" type="long" />
+		<field name="ma" type="String" />
+		<field name="ten" type="String" />
+		<field name="mota" type="String" />
+	</model>
+</model-hints>

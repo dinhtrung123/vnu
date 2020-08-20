@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="org.oep.core.model.LogSMS" />
+	<import class="org.oep.core.model.Mail" />
+	<import class="org.oep.core.model.MappingVmap" />
+	<import class="org.oep.core.model.PhanQuyen" />
+	<import class="org.oep.core.model.ThamSo" />
+	<import class="org.oep.core.model.ThamSoLoai" />
+	<import class="org.oep.core.model.TrungTamHanhChinh" />
+	<class name="org.oep.core.model.impl.LogSMSImpl" table="oep_logs_sms">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="sent_date_time" name="sentDateTime" type="org.hibernate.type.TimestampType" />
+		<property name="phone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="response_date" name="responseDate" type="org.hibernate.type.TimestampType" />
+		<property column="error_code" name="errorCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="error_detail" name="errorDetail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="message_id" name="messageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="org.oep.core.model.impl.MailImpl" table="oep_mail_history">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="group_id" name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="ma" name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="to_address" name="toAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="body" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="ngaygui" name="ngayGui" type="org.hibernate.type.TimestampType" />
+		<property column="trangthai" name="trangThai" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="org.oep.core.model.impl.MappingVmapImpl" table="idm_mappingvmap">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="classpk" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="classname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="latitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="longitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ghichu" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="org.oep.core.model.impl.PhanQuyenImpl" table="idm_phanquyen">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="classname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="classpk" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="giatri" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="org.oep.core.model.impl.ThamSoImpl" table="oep_thamso">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property column="group_id" name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="classname" name="className" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="classpk" name="classPK" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="loai_id" name="loaiId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="giatri" name="giaTri" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="mota" name="moTa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="trangthai" name="trangThai" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property column="quyen_tac_dong" name="quyenTacDong" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="org.oep.core.model.impl.ThamSoLoaiImpl" table="oep_thamso_loai">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="mota" name="moTa" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="org.oep.core.model.impl.TrungTamHanhChinhImpl" table="idm_trungtamhanhchinh">
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ma" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ten" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="donvi_id" name="donViId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="donvi_ids" name="donViIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="thongtin_lienhe" name="thongTinLienHe" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="trangthai" name="trangThai" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

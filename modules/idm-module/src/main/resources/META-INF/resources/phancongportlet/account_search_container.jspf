@@ -1,0 +1,39 @@
+
+<%@page import="dtt.vn.account.search.AccountHelper"%>
+<%@page import="dtt.vn.vnpost.model.Account"%>
+<%@page import="java.util.List"%>
+<%@page import="dtt.vn.account.search.AccountRecordSearchTerms"%>
+<%@page import="dtt.vn.account.search.AccountRecordSearch"%>
+<%@include file="/phancongportlet/init.jsp" %>
+<liferay-ui:search-container 
+	emptyResultsMessage="auditingrecord-empty-results-message"
+	searchContainer="<%= new AccountRecordSearch(renderRequest, AccountRecordSearch.DEFAULT_CUR_PARAM, iteratorURL) %>">
+
+	<liferay-ui:search-container-results>
+
+	<%
+	AccountRecordSearchTerms searchTerms = (AccountRecordSearchTerms)searchContainer.getSearchTerms();
+	List<Account> resultsAccountRecords = AccountHelper.getAccountByStatus(searchTerms, 2, searchContainer.getStart(), searchContainer.getEnd());
+	int totalAccountRecords = AccountHelper.getTotalAccountCountByStatus(searchTerms, 2, searchContainer.getStart(), searchContainer.getEnd()); 
+	pageContext.setAttribute("results", resultsAccountRecords);
+	pageContext.setAttribute("total", totalAccountRecords);
+	%>
+
+
+	</liferay-ui:search-container-results>
+
+	<liferay-ui:search-container-row
+			className="dtt.vn.vnpost.model.Account"
+			modelVar="aAccount" indexVar="indx">
+			<liferay-ui:search-container-column-text name="Id"><%= searchContainer.getStart()+indx+1%> </liferay-ui:search-container-column-text>
+			<liferay-ui:search-container-column-text property="fullName" />
+	
+			<liferay-ui:search-container-column-text property="email" />
+			<liferay-ui:search-container-column-text property="personalId" />
+			<liferay-ui:search-container-column-text property="telNo" />
+			<liferay-ui:search-container-column-jsp cssClass="entry-action"
+				path="/accountportlet/action.jsp" />
+			
+		</liferay-ui:search-container-row>
+	<liferay-ui:search-iterator />
+</liferay-ui:search-container>

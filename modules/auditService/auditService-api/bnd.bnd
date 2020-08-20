@@ -1,0 +1,9 @@
+Bundle-Name: auditService-api
+Bundle-SymbolicName: dtt.vn.audit.api
+
+Export-Package:\
+	dtt.vn.audit.exception,\
+	dtt.vn.audit.model,\
+	dtt.vn.audit.service,\
+	dtt.vn.audit.service.persistence
+-includeresource: META-INF/service.xml=../auditService-service/service.xml
